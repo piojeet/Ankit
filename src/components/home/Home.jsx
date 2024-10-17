@@ -7,8 +7,12 @@ function Home() {
   return (
     <div>
         <Nav />
+        <div className='relative z-20'>
         <NavLinks />
+        </div>
+        <div className='relative z-10'>
         <HomeHero />
+        </div>
     </div>
   )
 }
