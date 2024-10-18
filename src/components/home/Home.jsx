@@ -2,6 +2,7 @@ import React from 'react'
 import HomeHero from './HomeHero'
 import Nav from '../nav/Nav'
 import NavLinks from '../nav/NavLinks'
+import ProductCategrees from './ProductCategrees'
 
 function Home() {
   return (
@@ -13,6 +14,7 @@ function Home() {
         <div className='relative z-10'>
         <HomeHero />
         </div>
+        <ProductCategrees />
     </div>
   )
 }
