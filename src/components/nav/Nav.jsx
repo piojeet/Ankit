@@ -158,7 +158,7 @@ function Nav() {
                 </div>
                 <div className='w-[250px] bg-whiteColor h-full flex-shrink-0 border border-buttonColor'>
                   <div className='flex items-center justify-between p-5'>
-                    <div><img src={Sumsong} alt="" /></div>
+                    <div><img src={Sumsong} alt="" className='w-12' /></div>
                     <div>
                       <p>Samsang</p>
                       <p>Galaxy S23 5G</p>
@@ -167,7 +167,7 @@ function Nav() {
                   </div>
 
                   <div className='flex items-center justify-between p-5'>
-                    <div><img src={Sumsong} alt="" /></div>
+                    <div><img src={Sumsong} alt="" className='w-12' /></div>
                     <div>
                       <p>Samsang</p>
                       <p>Galaxy S23 5G</p>

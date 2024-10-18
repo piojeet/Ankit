@@ -4,6 +4,51 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  font-family: 'Poppins', sans-serif;
+@layer base {
+  body {
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .range input {
+    @apply row-start-2 col-start-1 pointer-events-none appearance-none bg-transparent;
+  }
+
+  .range input::-webkit-slider-thumb {
+    @apply pointer-events-auto appearance-none w-[18px] h-[18px] bg-lightOrange rounded-full cursor-pointer;
+  }
+
+  .max-price::-webkit-outer-spin-button,
+  .max-price::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+ .max-price {
+    -moz-appearance: textfield;
+  }
+
+  .min-price::-webkit-outer-spin-button,
+  .min-price::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+ .min-price {
+    -moz-appearance: textfield;
+  }
+
+  .product-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .product-scrollbar {
+    scroll-behavior: smooth;
+    cursor: grab;
+  }
+
+  .compare-grid {
+    display: grid;
+    grid-template-columns: 1fr .5fr 1fr;
+  }
+
 }

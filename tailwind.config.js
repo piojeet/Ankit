@@ -16,7 +16,9 @@ module.exports = {
         buttonColor: "#003366",
         lightOrange: "#FFA500",
         blackColor: "#23262F",
-        whiteColor: '#ffffff'
+        whiteColor: '#ffffff',
+        borderColor: '#EDEFF2',
+        lightBackground: '#FCFCFD'
       },
     },
     container: {
