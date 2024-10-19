@@ -3,6 +3,7 @@ import HomeHero from './HomeHero'
 import Nav from '../nav/Nav'
 import NavLinks from '../nav/NavLinks'
 import ProductCategrees from './ProductCategrees'
+import ProductBanner from './ProductBanner'
 
 function Home() {
   return (
@@ -15,6 +16,7 @@ function Home() {
         <HomeHero />
         </div>
         <ProductCategrees />
+        <ProductBanner />
     </div>
   )
 }
