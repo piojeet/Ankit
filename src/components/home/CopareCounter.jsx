@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useCallback, useEffect, useRef, useState } from 'react';
 import Mobile from '../../assets/307, Banking, Online, Payment, Shopping.svg';
 import Cars from '../../assets/cars.svg';
 import CharatOrange from '../../assets/charat-down-orange.svg'
@@ -25,7 +25,8 @@ function CopareCounter() {
     const [minValue, setMinValue] = useState(1500);
     const [maxValue, setMaxValue] = useState(40000);
 
-    const updateProgress = () => {
+    // Using useCallback to ensure updateProgress has a stable reference
+    const updateProgress = useCallback(() => {
         const range = maxInputRef.current.max - minInputRef.current.min;
         const valueRange = maxValue - minValue;
         const width = (valueRange / range) * 100;
@@ -42,11 +43,11 @@ function CopareCounter() {
         if (maxPriceInputRef.current) {
             maxPriceInputRef.current.value = maxValue;
         }
-    };
+    }, [minValue, maxValue]);
 
     useEffect(() => {
         updateProgress();
-    }, [minValue, maxValue]);
+    }, [minValue, maxValue, updateProgress]);
 
     const updateRange = (inputValue, isMinInput) => {
         let newMin = isMinInput ? inputValue : minValue;
@@ -64,11 +65,7 @@ function CopareCounter() {
         updateProgress();
     };
 
-    useEffect(() => {
-        updateProgress();
-    }, [minValue, maxValue]);
-
-    // features code 
+    // Features data
     const features = [
         { id: 'features1', label: 'Dual Sim' },
         { id: 'features2', label: '4G LTE' },
@@ -77,7 +74,8 @@ function CopareCounter() {
         { id: 'features5', label: 'Android' },
         { id: 'features6', label: '5G LTE' },
         { id: 'features7', label: 'Apple' },
-    ]
+    ];
+
     const priceranges = [
         { id: 'product1', label: 'Mobiles', imgSrc: Mobile, defaultChecked: true },
         { id: 'product2', label: 'Cars', imgSrc: Cars },
@@ -87,12 +85,15 @@ function CopareCounter() {
         { id: 'product6', label: 'Hotels', imgSrc: Hotel },
         { id: 'product7', label: 'demo 1', imgSrc: Mobile },
         { id: 'product8', label: 'demo 2', imgSrc: Mobile },
-    ]
+    ];
 
-    const [selectedProduct, setSelectedProduct] = useState(priceranges.find((pricerange) => pricerange.defaultChecked)?.id);
+    const [selectedProduct, setSelectedProduct] = useState(
+        priceranges.find((pricerange) => pricerange.defaultChecked)?.id
+    );
+
     const handleChange = (event) => {
-        setSelectedProduct(event.target.id)
-    }
+        setSelectedProduct(event.target.id);
+    };
 
     return (
         <div className='p-7 py-6'>
