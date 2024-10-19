@@ -11,7 +11,7 @@ import Google from '../../assets/google.svg'
 function MainFooter() {
   return (
     <>
-    <div className='px-2 bg-buttonColor pb-10 pt-5'>
+    <div className='px-2 bg-buttonColor pb-20 pt-5'>
         <div className='flex justify-start items-start gap-x-[8vw]'>
             <div className='max-w-[400px] w-full'>
                 <div className='mb-4'><span className=' bg-lightBackground block w-fit rounded-md'><img src={Logo} alt="" /></span></div>
@@ -29,34 +29,34 @@ function MainFooter() {
             <div>
                 <h3 className='text-[22px] font-semibold text-lightBackground'>Special Pages</h3>
                 <div className='text-[16px] font-normal text-lightBackground flex flex-col gap-1 mt-1'>
-                    <span className='cursor-pointer'>Invite Friends</span>
-                    <span className='cursor-pointer'>Invite Friends</span>
-                    <span className='cursor-pointer'>Invite Friends</span>
-                    <span className='cursor-pointer'>Invite Friends</span>
-                    <span className='cursor-pointer'>Invite Friends</span>
-                    <span className='cursor-pointer'>Invite Friends</span>
+                    <span className='cursor-pointer hover:text-[#b8b8b8]'>Invite Friends</span>
+                    <span className='cursor-pointer hover:text-[#b8b8b8]'>Invite Friends</span>
+                    <span className='cursor-pointer hover:text-[#b8b8b8]'>Invite Friends</span>
+                    <span className='cursor-pointer hover:text-[#b8b8b8]'>Invite Friends</span>
+                    <span className='cursor-pointer hover:text-[#b8b8b8]'>Invite Friends</span>
+                    <span className='cursor-pointer hover:text-[#b8b8b8]'>Invite Friends</span>
                 </div>
             </div>
             <div>
                 <h3 className='text-[22px] font-semibold text-lightBackground'>Special Pages</h3>
                 <div className='text-[16px] font-normal text-lightBackground flex flex-col gap-1 mt-1'>
-                    <span className='cursor-pointer'>Invite Friends</span>
-                    <span className='cursor-pointer'>Invite Friends</span>
-                    <span className='cursor-pointer'>Invite Friends</span>
-                    <span className='cursor-pointer'>Invite Friends</span>
-                    <span className='cursor-pointer'>Invite Friends</span>
-                    <span className='cursor-pointer'>Invite Friends</span>
+                    <span className='cursor-pointer hover:text-[#b8b8b8]'>Invite Friends</span>
+                    <span className='cursor-pointer hover:text-[#b8b8b8]'>Invite Friends</span>
+                    <span className='cursor-pointer hover:text-[#b8b8b8]'>Invite Friends</span>
+                    <span className='cursor-pointer hover:text-[#b8b8b8]'>Invite Friends</span>
+                    <span className='cursor-pointer hover:text-[#b8b8b8]'>Invite Friends</span>
+                    <span className='cursor-pointer hover:text-[#b8b8b8]'>Invite Friends</span>
                 </div>
             </div>
             <div>
                 <h3 className='text-[22px] font-semibold text-lightBackground'>Special Pages</h3>
                 <div className='text-[16px] font-normal text-lightBackground flex flex-col gap-1 mt-1'>
-                    <span className='cursor-pointer'>Invite Friends</span>
-                    <span className='cursor-pointer'>Invite Friends</span>
-                    <span className='cursor-pointer'>Invite Friends</span>
-                    <span className='cursor-pointer'>Invite Friends</span>
-                    <span className='cursor-pointer'>Invite Friends</span>
-                    <span className='cursor-pointer'>Invite Friends</span>
+                    <span className='cursor-pointer hover:text-[#b8b8b8]'>Invite Friends</span>
+                    <span className='cursor-pointer hover:text-[#b8b8b8]'>Invite Friends</span>
+                    <span className='cursor-pointer hover:text-[#b8b8b8]'>Invite Friends</span>
+                    <span className='cursor-pointer hover:text-[#b8b8b8]'>Invite Friends</span>
+                    <span className='cursor-pointer hover:text-[#b8b8b8]'>Invite Friends</span>
+                    <span className='cursor-pointer hover:text-[#b8b8b8]'>Invite Friends</span>
                 </div>
             </div>
         </div>

@@ -3,6 +3,7 @@ import DownArrow from '../../assets/downarrow.svg'
 import Home from '../../assets/home.svg'
 import BestOffers from '../../assets/best-offers.svg'
 import { NavLink } from 'react-router-dom'
+import Sumsong from '../../assets/sumsong.png'
 
 function NavLinks() {
     const navItems = [
@@ -46,11 +47,41 @@ function NavLinks() {
             title: 'Refrigerators',
             dropdownItems: ['Demos 1', 'Demos 2', 'Demos 3']
         },
-        {
-            title: 'Electronics & More',
-            dropdownItems: ['Demos 1', 'Demos 2', 'Demos 3']
-        },
+        // {
+        //     title: 'Electronics & More',
+        //     dropdownItems: ['Demos 1', 'Demos 2', 'Demos 3']
+        // },
     ];
+
+
+    // const [isVisible, setIsVisible] = useState(false); // Initially hidden
+    // const divRef = useRef(null);
+    // const buttonRef = useRef(null); // Ref for the button
+
+    // Toggle visibility when button is clicked
+    // const toggleVisibility = () => {
+    //   setIsVisible(!isVisible); // Toggle between visible and hidden
+    // };
+
+    // Hide the div if clicking outside button or div
+    // useEffect(() => {
+    //   const handleClickOutside = (event) => {
+    // Check if the click is outside the button and the div
+    // if (divRef.current && !divRef.current.contains(event.target) &&
+    // buttonRef.current && !buttonRef.current.contains(event.target)) {
+    //   setIsVisible(false); 
+    // Hide the div if clicking outside
+    // }
+    //   };
+
+    // Add event listener for detecting outside clicks
+    //   document.addEventListener('click', handleClickOutside);
+
+    // Cleanup event listener when component unmounts
+    //   return () => {
+    //     document.removeEventListener('click', handleClickOutside);
+    //   };
+    // }, []);
 
     return (
         <div>
@@ -63,7 +94,7 @@ function NavLinks() {
                     {navItems.map((item, index) => (
                         <React.Fragment key={index}>
                             <span className='w-[1px] h-[25px] bg-whiteColor'></span>
-                            <li>
+                            <li className='relative'>
                                 <NavLink to='#' className='relative group text-[14px] flex items-center gap-2'>
                                     <span className='text-whiteColor font-semibold'>{item.title}</span> <span><img src={DownArrow} alt="" /></span>
                                     <div className='absolute top-[100%] hidden group-hover:flex flex-col gap-2 whitespace-nowrap bg-buttonColor text-whiteColor py-2 rounded-md left-0'>
@@ -72,46 +103,113 @@ function NavLinks() {
                                         ))}
                                     </div>
                                 </NavLink>
+
                             </li>
+                                
 
                         </React.Fragment>
                     ))}
 
 
-                  <div className='flex items-center justify-between'>
-                  <li>
-                        <NavLink to='#' className='relative group text-[14px] flex items-center gap-2 px-2 bg-[#DC4F45] h-[40px]'>
-                            <span className='text-whiteColor font-semibold'>Campare</span> <span><img src={DownArrow} alt="" /></span>
-                            <div className='absolute top-[100%] hidden group-hover:flex flex-col gap-2 whitespace-nowrap bg-[#DC4F45] text-whiteColor py-2 rounded-md left-0'>
+                    <div className='flex items-center justify-between'>
+                        <li>
+                            <NavLink to='#' className='relative group text-[14px] flex items-center gap-2 px-2 h-[40px]'>
+                                <span className='text-whiteColor font-semibold'>Electronics & More</span> <span><img src={DownArrow} alt="" /></span>
+                                <div className={`absolute right-0 top-[100%] z-50 bg-buttonColor w-[800px] hidden items-start justify-between group-hover:flex`}>
+                                    <div className='w-full p-4 text-whiteColor'>
+                                        <div className='whitespace-nowrap flex items-start justify-between'>
+                                            <div>
+                                                <h3 className='text-[25px] font-semibold'>Mobile Phones</h3>
+                                                <ul className='list-disc pl-5 text-[14px] font-semibold'>
+                                                    <li>demo 1</li>
+                                                    <li>demo 2</li>
+                                                    <li>demo 3</li>
+                                                </ul>
+                                            </div>
+                                            <div>
+                                                <h3 className='text-[25px] font-semibold'>Mobile Phones</h3>
+                                                <ul className='list-disc pl-5 text-[14px] font-semibold'>
+                                                    <li>demo 1</li>
+                                                    <li>demo 2</li>
+                                                    <li>demo 3</li>
+                                                </ul>
+                                            </div>
+                                        </div>
 
-                                <span><a href="/#" className='px-6'>Demo 1</a></span>
-                                <span><a href="/#" className='px-6'>Demo 2</a></span>
-                                <span><a href="/#" className='px-6'>Demo 3</a></span>
+                                        <div className='flex items-start justify-between mt-4'>
+                                            <div className='whitespace-nowrap'>
+                                                <h3 className='text-[25px] font-semibold'>Mobile Phones</h3>
+                                                <ul className='list-disc pl-5 text-[14px] font-semibold'>
+                                                    <li>demo 1</li>
+                                                    <li>demo 2</li>
+                                                    <li>demo 3</li>
+                                                </ul>
+                                            </div>
+                                            <div className='whitespace-nowrap'>
+                                                <h3 className='text-[25px] font-semibold'>Mobile Phones</h3>
+                                                <ul className='list-disc pl-5 text-[14px] font-semibold'>
+                                                    <li>demo 1</li>
+                                                    <li>demo 2</li>
+                                                    <li>demo 3</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className='w-[250px] bg-whiteColor h-full flex-shrink-0 border border-buttonColor'>
+                                        <div className='flex items-center justify-between p-5'>
+                                            <div><img src={Sumsong} alt="" className='w-12' /></div>
+                                            <div>
+                                                <p>Samsang</p>
+                                                <p>Galaxy S23 5G</p>
+                                                <p>Rs. 1 Lac</p>
+                                            </div>
+                                        </div>
 
-                            </div>
-                        </NavLink>
-                    </li>
+                                        <div className='flex items-center justify-between p-5'>
+                                            <div><img src={Sumsong} alt="" className='w-12' /></div>
+                                            <div>
+                                                <p>Samsang</p>
+                                                <p>Galaxy S23 5G</p>
+                                                <p>Rs. 1 Lac</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink to='#' className='relative group text-[14px] flex items-center gap-2 px-2 bg-[#DC4F45] h-[40px]'>
+                                <span className='text-whiteColor font-semibold'>Campare</span> <span><img src={DownArrow} alt="" /></span>
+                                <div className='absolute top-[100%] hidden group-hover:flex flex-col gap-2 whitespace-nowrap bg-[#DC4F45] text-whiteColor py-2 rounded-md left-0'>
 
-                    <li>
-                        <NavLink to='#' className='relative group text-[14px] flex items-center gap-2 px-2 bg-[#C8DD16] h-[40px]'>
-                            <span className='text-whiteColor font-semibold'>Coupons</span> <span><img src={DownArrow} alt="" /></span>
-                            <div className='absolute top-[100%] hidden group-hover:flex flex-col gap-2 whitespace-nowrap bg-[#C8DD16] text-whiteColor py-2 rounded-md left-0'>
+                                    <span><a href="/#" className='px-6'>Demo 1</a></span>
+                                    <span><a href="/#" className='px-6'>Demo 2</a></span>
+                                    <span><a href="/#" className='px-6'>Demo 3</a></span>
 
-                                <span><a href="/#" className='px-6'>Demo 1</a></span>
-                                <span><a href="/#" className='px-6'>Demo 2</a></span>
-                                <span><a href="/#" className='px-6'>Demo 3</a></span>
+                                </div>
+                            </NavLink>
+                        </li>
 
-                            </div>
-                        </NavLink>
-                    </li>
+                        <li>
+                            <NavLink to='#' className='relative group text-[14px] flex items-center gap-2 px-2 bg-[#C8DD16] h-[40px]'>
+                                <span className='text-whiteColor font-semibold'>Coupons</span> <span><img src={DownArrow} alt="" /></span>
+                                <div className='absolute top-[100%] hidden group-hover:flex flex-col gap-2 whitespace-nowrap bg-[#C8DD16] text-whiteColor py-2 rounded-md left-0'>
 
-                    <li>
-                        <NavLink to='#' className='text-[14px] font-semibold flex items-center gap-1 text-whiteColor pl-2'>
-                            <span><img src={BestOffers} alt="" /></span>
-                            <span>Best Offers</span>
-                        </NavLink>
-                    </li>
-                  </div>
+                                    <span><a href="/#" className='px-6'>Demo 1</a></span>
+                                    <span><a href="/#" className='px-6'>Demo 2</a></span>
+                                    <span><a href="/#" className='px-6'>Demo 3</a></span>
+
+                                </div>
+                            </NavLink>
+                        </li>
+
+                        <li>
+                            <NavLink to='#' className='text-[14px] font-semibold flex items-center gap-1 text-whiteColor pl-2'>
+                                <span><img src={BestOffers} alt="" /></span>
+                                <span>Best Offers</span>
+                            </NavLink>
+                        </li>
+                    </div>
                 </ul>
             </div>
         </div>

@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./components/home/Home";
 import MainFooter from "./components/footer/MainFooter";
+import MiniFooter from "./components/footer/MiniFooter";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         </div>
       </Router>
       <MainFooter />
+      <MiniFooter />
       </>
   );
 }
