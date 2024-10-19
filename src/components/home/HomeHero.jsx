@@ -27,7 +27,7 @@ function HomeHero() {
       <div className='min-h-[200px] h-auto'>
       <div className='h-[45px] content-center'>
         <div className='flex items-center justify-between relative z-10'>
-          <div className='text-[14px] font-semibold h-[40px] content-center bg-lightOrange px-5 max-w-[300px] w-full text-center flex-shrink-0 text-whiteColor'>Popular Cashback Stores</div>
+          <div className='text-[14px] font-semibold h-[40px] content-center bg-lightOrange px-2 max-w-[300px] w-full text-center flex-shrink-0 text-whiteColor'>Popular Cashback Stores</div>
           <div><span><img src={Amazon} alt="" className='h-10' /></span></div>
           <div><span><img src={Flipkart} alt="" /></span></div>
           <div><span><img src={Myntra} alt="" /></span></div>
@@ -37,10 +37,10 @@ function HomeHero() {
           <div><span><img src={Foxtale} alt="" /></span></div>
           <div><span><img src={Caffeine} alt="" /></span></div>
 
-          <div className='group flex items-center gap-2 bg-lightOrange h-[40px] px-4 relative cursor-pointer'>
+          <div className='group flex items-center gap-2 bg-lightOrange h-[40px] px-2 relative cursor-pointer'>
             <span className='text-[14px] font-semibold text-whiteColor'>More</span>
             <span className='inline-block'><img src={DownArrow} alt="" className='w-4' /></span>
-            <div className='absolute top-[100%] right-7 bg-lightOrange text-whiteColor p-5 whitespace-nowrap flex-col gap-2 text-[14px] font-semibold hidden group-hover:flex rounded-md'>
+            <div className='absolute top-[100%] right-2 bg-lightOrange text-whiteColor p-5 whitespace-nowrap flex-col gap-2 text-[14px] font-semibold hidden group-hover:flex rounded-md'>
               <div className='cursor-pointer'>demo 1</div>
               <div className='cursor-pointer'>demo 2</div>
               <div className='cursor-pointer'>demo 3</div>
@@ -49,7 +49,7 @@ function HomeHero() {
         </div>
       </div>
 
-      <div className='compare-grid items-start justify-between px-4 bg-buttonColor gap-4 py-1 h-auto'>
+      <div className='compare-grid items-start justify-between px-2 bg-buttonColor gap-2 py-2 h-auto'>
         <div className='bg-whiteColor w-full rounded-md flex-shrink-0 h-full'>
           <div className='p-7 py-4'>
             <h3 className='text-[20px] font-bold text-blackColor text-center'>COMPARE PRODUCTS</h3>

@@ -53,7 +53,7 @@ function Nav() {
   return (
     <div>
       <header className=''>
-        <nav className='flex items-center justify-between bg-buttonColor h-[40px] px-4'>
+        <nav className='flex items-center justify-between bg-buttonColor h-[40px] px-2'>
           <div className='flex items-center justify-start gap-2 h-full'>
             <div><a href="/"><img src={FaceBook} alt="" className='w-5 h-5 aspect-square' /></a></div>
             <div><a href="/"><img src={Instagram} alt="" className='w-5 h-5 aspect-square' /></a></div>
@@ -107,7 +107,7 @@ function Nav() {
           </div>
         </nav>
 
-        <div className='px-4 pl-3 h-[50px] bg-whiteColor flex items-center justify-between'>
+        <div className='px-2 pl-1 h-[50px] bg-whiteColor flex items-center justify-between'>
           <div className=''>
             <img src={Logo} alt="" className='h-14' />
           </div>
