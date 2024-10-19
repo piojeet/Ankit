@@ -17,8 +17,6 @@ import Apple from '../../assets/apple.svg'
 import Chorom from '../../assets/chorom.svg'
 import FirFox from '../../assets/firfox.svg'
 
-import CaratDown from '../../assets/carat-down.svg'
-
 function Nav() {
   
 
