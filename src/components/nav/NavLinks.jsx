@@ -54,7 +54,7 @@ function NavLinks() {
 
     return (
         <div>
-            <div className='flex items-center justify-between h-[40px] bg-buttonColor px-7 gap-7 z-20'>
+            <div className='flex items-center justify-between h-[40px] bg-buttonColor px-4 gap-7 z-20'>
                 <div className='flex items-center justify-center h-[32px] w-[32px] rounded-md flex-shrink-0 bg-whiteColor'>
                     <img src={Home} alt="" />
                 </div>

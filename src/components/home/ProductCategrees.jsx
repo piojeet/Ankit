@@ -70,14 +70,14 @@ function ProductCategrees() {
 
                 {/* Next button */}
                 {!isEnd && (
-                    <div onClick={() => swiper.slideNext()} className={`flex justify-center items-center bg-lightOrange w-fit h-[60px] rounded-md px-2 absolute top-1/2 right-7 translate-y-[-50%] z-10 cursor-pointer shadow-[0px_0px_50px_0px_rgba(0,0,0,0.8)]`}>
+                    <div onClick={() => swiper.slideNext()} className={`flex justify-center items-center bg-lightOrange w-fit h-[60px] rounded-md px-2 absolute top-1/2 right-4 translate-y-[-50%] z-10 cursor-pointer shadow-[0px_0px_50px_0px_rgba(0,0,0,0.8)]`}>
                         <img src={Arrow} alt="arrow" className='w-[20px] h-[20px] -rotate-90' />
                     </div>
                 )}
 
                 {/* Prev button */}
                 {!isBeginning && (
-                    <div onClick={() => swiper.slidePrev()} className={`flex justify-center items-center bg-lightOrange w-fit h-[60px] rounded-md px-2 absolute top-1/2 left-7 translate-y-[-50%] z-10 cursor-pointer shadow-[0px_0px_50px_0px_rgba(0,0,0,0.8)]`}>
+                    <div onClick={() => swiper.slidePrev()} className={`flex justify-center items-center bg-lightOrange w-fit h-[60px] rounded-md px-2 absolute top-1/2 left-4 translate-y-[-50%] z-10 cursor-pointer shadow-[0px_0px_50px_0px_rgba(0,0,0,0.8)]`}>
                         <img src={Arrow} alt="arrow" className='w-[20px] h-[20px] rotate-90' />
                     </div>
                 )}
