@@ -44,6 +44,10 @@ function CopareCounter() {
         }
     };
 
+    useEffect(() => {
+        updateProgress();
+    }, [minValue, maxValue]);
+
     const updateRange = (inputValue, isMinInput) => {
         let newMin = isMinInput ? inputValue : minValue;
         let newMax = isMinInput ? maxValue : inputValue;

@@ -47,7 +47,7 @@ function ProductCategrees() {
                     spaceBetween={40}
                     freeMode={true}
                     modules={[FreeMode, Navigation]}
-                    grabCursor={true}
+                    // grabCursor={true}
                     onReachEnd={() => setIsEnd(true)}
                     onFromEdge={() => setIsEnd(false)}
                     onReachBeginning={() => setIsBeginning(true)}
