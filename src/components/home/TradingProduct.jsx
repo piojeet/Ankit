@@ -2,15 +2,14 @@ import React, { useState } from 'react';
 import mobile from '../../assets/307, Banking, Online, Payment, Shopping.svg'; // Assuming this is the correct path
 import { Swiper, SwiperSlide } from 'swiper/react';
 import CharatOrange from '../../assets/charat-down-orange.svg';
-import Samsang1 from '../../assets/image 11.png';
-import Samsang2 from '../../assets/image 15.png';
-import Car1 from '../../assets/pngwing.com (2).png';
-import Car2 from '../../assets/pngwing.com (4).png';
-import Bike1 from '../../assets/pngwing.com (22).png';
-import Bike2 from '../../assets/pngwing.com (20) 1.png';
-import Laptop1 from '../../assets/pngwing.com (29).png';
-import Laptop2 from '../../assets/pngwing.com (27).png';
-import Arrow from '../../assets/downarrow.svg';
+
+import car from '../../assets/cars.svg' 
+import calender from '../../assets/calender.svg' 
+import bike from '../../assets/bichbike.svg' 
+import laptop from '../../assets/301, Box, Drop Shipper, E-Commerce, Laptop, Online.png' 
+import hotel from '../../assets/hotel.svg' 
+import mashin from '../../assets/macshine.svg' 
+import tablet from '../../assets/765, Screen, Television, Tv.svg'
 
 // Import Swiper styles
 import 'swiper/css';
@@ -25,13 +24,13 @@ function TradingProduct() {
 
   const comparePriceProduct = [
     { id: 'titem1', label: 'Mobiles', imgSrc: mobile, data: 'mobilesPrice', defaultChecked: false },
-    { id: 'titem2', label: 'Cars', imgSrc: mobile, data: 'carsPrice', defaultChecked: true },
-    { id: 'titem3', label: 'Flight', imgSrc: mobile, data: 'FlightsPrice', defaultChecked: false },
-    { id: 'titem4', label: 'Bikes', imgSrc: mobile, data: 'BikesPrice', defaultChecked: false },
-    { id: 'titem5', label: 'Laptops', imgSrc: mobile, data: 'LaptopsPrice', defaultChecked: false },
-    { id: 'titem6', label: 'Hotels', imgSrc: mobile, data: 'HotelsPrice', defaultChecked: false },
-    { id: 'titem7', label: 'Washing Machines', imgSrc: mobile, data: 'washing-machinesPrice', defaultChecked: false },
-    { id: 'titem8', label: 'Tablets', imgSrc: mobile, data: 'TabletsPrice', defaultChecked: false },
+    { id: 'titem2', label: 'Cars', imgSrc: car, data: 'carsPrice', defaultChecked: true },
+    { id: 'titem3', label: 'Flight', imgSrc: calender, data: 'FlightsPrice', defaultChecked: false },
+    { id: 'titem4', label: 'Bikes', imgSrc: bike, data: 'BikesPrice', defaultChecked: false },
+    { id: 'titem5', label: 'Laptops', imgSrc: laptop, data: 'LaptopsPrice', defaultChecked: false },
+    { id: 'titem6', label: 'Hotels', imgSrc: hotel, data: 'HotelsPrice', defaultChecked: false },
+    { id: 'titem7', label: 'Washing Machines', imgSrc: mashin, data: 'washing-machinesPrice', defaultChecked: false },
+    { id: 'titem8', label: 'Tablets', imgSrc: tablet, data: 'TabletsPrice', defaultChecked: false },
   ];
 
   const comparePriceProductData = [

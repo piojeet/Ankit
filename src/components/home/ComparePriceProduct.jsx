@@ -1,5 +1,12 @@
 import React, { useState } from 'react'
 import mobile from '../../assets/307, Banking, Online, Payment, Shopping.svg' // Assuming this is the correct path
+import car from '../../assets/cars.svg' 
+import calender from '../../assets/calender.svg' 
+import bike from '../../assets/bichbike.svg' 
+import laptop from '../../assets/301, Box, Drop Shipper, E-Commerce, Laptop, Online.png' 
+import hotel from '../../assets/hotel.svg' 
+import mashin from '../../assets/macshine.svg' 
+import tablet from '../../assets/765, Screen, Television, Tv.svg' 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import CharatOrange from '../../assets/charat-down-orange.svg'
 import Samsang1 from '../../assets/image 11.png'
@@ -30,13 +37,13 @@ function ComparePriceProduct() {
 
     const comparePriceProduct = [
         { id: 'item1', label: 'Mobiles', imgSrc: mobile, data: 'mobiles', defaultChecked: false },
-        { id: 'item2', label: 'Cars', imgSrc: mobile, data: 'cars', defaultChecked: false },
-        { id: 'item3', label: 'Flight', imgSrc: mobile, data: 'Flights', defaultChecked: false },
-        { id: 'item4', label: 'Bikes', imgSrc: mobile, data: 'Bikes', defaultChecked: false },
-        { id: 'item5', label: 'Laptops', imgSrc: mobile, data: 'Laptops', defaultChecked: true },
-        { id: 'item6', label: 'Hotels', imgSrc: mobile, data: 'Hotels', defaultChecked: false },
-        { id: 'item7', label: 'Washing Machines', imgSrc: mobile, data: 'washing-machines', defaultChecked: false },
-        { id: 'item8', label: 'Tablets', imgSrc: mobile, data: 'Tablets', defaultChecked: false },
+        { id: 'item2', label: 'Cars', imgSrc: car, data: 'cars', defaultChecked: false },
+        { id: 'item3', label: 'Flight', imgSrc: calender, data: 'Flights', defaultChecked: false },
+        { id: 'item4', label: 'Bikes', imgSrc: bike, data: 'Bikes', defaultChecked: false },
+        { id: 'item5', label: 'Laptops', imgSrc: laptop, data: 'Laptops', defaultChecked: true },
+        { id: 'item6', label: 'Hotels', imgSrc: hotel, data: 'Hotels', defaultChecked: false },
+        { id: 'item7', label: 'Washing Machines', imgSrc: mashin, data: 'washing-machines', defaultChecked: false },
+        { id: 'item8', label: 'Tablets', imgSrc: tablet, data: 'Tablets', defaultChecked: false },
         // { id: 'item9', label: 'Tablets', imgSrc: mobile, data: 'Tablets' },
         // { id: 'item10', label: 'Tablets', imgSrc: mobile, data: 'Tablets' },
         // { id: 'item11', label: 'Tablets', imgSrc: mobile, data: 'Tablets' },
@@ -102,7 +109,7 @@ function ComparePriceProduct() {
                                     data-filter={item.data} // Changed 'pricerange.id' to 'item.id'
                                 />
                                 <label htmlFor={item.id} className='peer-checked:text-lightBackground font-semibold peer-checked:bg-lightOrange flex items-center gap-x-1 px-2 py-1 rounded-md border border-[#EDEFF2] bg-[#FCFCFD] text-blackColor cursor-pointer' data-filter={item.data}>
-                                    <span><img src={item.imgSrc} alt="" className='w-7 h-7' /></span>
+                                    <span><img src={item.imgSrc} alt="" className='w-7 h-7 flex-shrink-0 aspect-square' /></span>
                                     <span className='text-[18px]'>{item.label}</span>
                                 </label>
                             </div>
