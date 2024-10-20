@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react'; // Import Swiper for the slider
 import Banner1 from '../../assets/image 90.png'; // Import banner image
 import Banner2 from '../../assets/image 88.png'; // Import banner image
