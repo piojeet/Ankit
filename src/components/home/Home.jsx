@@ -4,6 +4,7 @@ import Nav from '../nav/Nav'
 import NavLinks from '../nav/NavLinks'
 import ProductCategrees from './ProductCategrees'
 import ProductBanner from './ProductBanner'
+import ComparePriceProduct from './ComparePriceProduct'
 
 function Home() {
   return (
@@ -17,6 +18,7 @@ function Home() {
         </div>
         <ProductCategrees />
         <ProductBanner />
+        <ComparePriceProduct />
     </div>
   )
 }
