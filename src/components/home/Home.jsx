@@ -5,6 +5,8 @@ import NavLinks from '../nav/NavLinks'
 import ProductCategrees from './ProductCategrees'
 import ProductBanner from './ProductBanner'
 import ComparePriceProduct from './ComparePriceProduct'
+import TradingProduct from './TradingProduct'
+import PopularComparisons from './PopularComparisons'
 
 function Home() {
   return (
@@ -19,6 +21,8 @@ function Home() {
         <ProductCategrees />
         <ProductBanner />
         <ComparePriceProduct />
+        <TradingProduct />
+        <PopularComparisons />
     </div>
   )
 }

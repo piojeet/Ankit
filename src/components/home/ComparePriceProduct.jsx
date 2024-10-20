@@ -26,10 +26,10 @@ function ComparePriceProduct() {
     const [isEnd, setIsEnd] = useState(false);
     const [isBeginning, setIsBeginning] = useState(true);
 
-    const [selectedData, setSelectedData] = useState('mobiles') // Default selected data is 'mobiles'
+    // const [selectedData, setSelectedData] = useState('mobiles') // Default selected data is 'mobiles'
 
     const comparePriceProduct = [
-        { id: 'item1', label: 'Mobiles', imgSrc: mobile, data: 'mobiles', defaultChecked: false }, 
+        { id: 'item1', label: 'Mobiles', imgSrc: mobile, data: 'mobiles', defaultChecked: false },
         { id: 'item2', label: 'Cars', imgSrc: mobile, data: 'cars', defaultChecked: false },
         { id: 'item3', label: 'Flight', imgSrc: mobile, data: 'Flights', defaultChecked: false },
         { id: 'item4', label: 'Bikes', imgSrc: mobile, data: 'Bikes', defaultChecked: false },
@@ -52,25 +52,26 @@ function ComparePriceProduct() {
         // { id: 'box6', topLabelName: 'Samsang', topBrandlName: 'Galaxy S23 5G', topPriceName: 'Rs. 1 Lac', topImgSrc: Samsang1, button: 'Compare Now', bottomLabelName: 'Samsang', bottomBrandlName: 'Galaxy S23 5G', bottomPriceName: 'Rs. 1 Lac', bottomImgSrc: Samsang2, data: 'mobiles' },
     ]
 
-    const handleRadioChange = (data) => {
-        setSelectedData(data)
-    }
-
-    const sortedProductData = [...comparePriceProductData].sort((a, b) =>
-        a.data === selectedData ? -1 : b.data === selectedData ? 1 : 0
-    )
-
-    const [selectedProduct, setSelectedProduct] = useState(
-        comparePriceProduct.find((comparePriceProducts) => comparePriceProducts.defaultChecked)?.id
+    const [selectedData, setSelectedData] = useState(
+        comparePriceProduct.find((item) => item.defaultChecked)?.data || 'mobiles'
+    );
+    const [activeProduct, setActiveProduct] = useState(
+        comparePriceProduct.find((item) => item.defaultChecked)?.id || 'item1'
     );
 
-    const handleChange = (event) => {
-        setSelectedProduct(event.target.id);
+    const handleProductChange = (event) => {
+        setActiveProduct(event.target.id);
+        setSelectedData(event.target.dataset.filter);
     };
+
+    // Ensure the selected data appears first in the sorted list
+    const filteredProductData = [...comparePriceProductData].sort((a, b) =>
+        a.data === selectedData ? -1 : b.data === selectedData ? 1 : 0
+    );
 
     return (
         <>
-        <h3 className='text-[30px] text-blackColor font-semibold px-2 mb-4'>Compare Price and Features </h3>
+            <h3 className='text-[30px] text-blackColor font-semibold px-2 mb-4'>Compare Price and Features </h3>
             <div className='relative px-4'>
                 <Swiper
                     onSwiper={setSwiper}
@@ -95,9 +96,10 @@ function ComparePriceProduct() {
                                     name="compare-price-product"
                                     id={item.id}
                                     className='peer hidden'
-                                    onChange={(event) => { handleChange(event); handleRadioChange(item.data); }} // Added event parameter
+                                    onChange={handleProductChange}
                                     defaultChecked={item.defaultChecked}
-                                    checked={selectedProduct === item.id} // Changed 'pricerange.id' to 'item.id'
+                                    checked={activeProduct === item.id}
+                                    data-filter={item.data} // Changed 'pricerange.id' to 'item.id'
                                 />
                                 <label htmlFor={item.id} className='peer-checked:text-lightBackground font-semibold peer-checked:bg-lightOrange flex items-center gap-x-1 px-2 py-1 rounded-md border border-[#EDEFF2] bg-[#FCFCFD] text-blackColor cursor-pointer' data-filter={item.data}>
                                     <span><img src={item.imgSrc} alt="" className='w-7 h-7' /></span>
@@ -133,37 +135,37 @@ function ComparePriceProduct() {
                     grabCursor={true}
                     className="mySwiper"
                 >
-                    {sortedProductData.map((item) => (
+                    {filteredProductData.map((item) => (
                         <SwiperSlide key={item.id} data-box={item.data}>
-                            <div className='my-4'>
-                            <div className='border-2 border-borderColor rounded-md'>
-                                <span></span>
-                                <div className='flex items-center justify-between border-b border-borderColor'>
-                                    <div className='flex-1 grid place-items-center p-4'>
-                                    <img src={item.topImgSrc} alt="" className='h-[110px]' />
+                            <div className='my-5'>
+                                <div className='border-2 border-borderColor rounded-md'>
+                                    <span></span>
+                                    <div className='flex items-center justify-between border-b border-borderColor'>
+                                        <div className='flex-1 grid place-items-center p-4'>
+                                            <img src={item.topImgSrc} alt="" className='h-[110px]' />
+                                        </div>
+                                        <div className='flex-1 grid place-items-center content-center text-left font-semibold'>
+                                            <div>
+                                                <div>{item.topLabelName}</div>
+                                                <div>{item.topBrandlName}</div>
+                                                <div>{item.topPriceName}</div>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div className='flex-1 grid place-items-center content-center text-left font-semibold'>
-                                        <div>
-                                        <div>{item.topLabelName}</div>
-                                        <div>{item.topBrandlName}</div>
-                                        <div>{item.topPriceName}</div>
+                                    <div className='flex items-center justify-between border-t border-borderColor'>
+                                        <div className='flex-1 grid place-items-center content-center text-left font-semibold'>
+                                            <div>
+                                                <div>{item.bottomLabelName}</div>
+                                                <div>{item.bottomBrandlName}</div>
+                                                <div>{item.bottomPriceName}</div>
+                                            </div>
+                                        </div>
+                                        <div className='flex-1 grid place-items-center p-4'>
+                                            <img src={item.bottomImgSrc} alt="" className='h-[110px]' />
                                         </div>
                                     </div>
                                 </div>
-                                <div className='flex items-center justify-between border-t border-borderColor'>
-                                    <div className='flex-1 grid place-items-center content-center text-left font-semibold'>
-                                        <div>
-                                        <div>{item.bottomLabelName}</div>
-                                        <div>{item.bottomBrandlName}</div>
-                                        <div>{item.bottomPriceName}</div>
-                                        </div>
-                                    </div>
-                                    <div className='flex-1 grid place-items-center p-4'>
-                                    <img src={item.bottomImgSrc} alt="" className='h-[110px]' />
-                                    </div>
-                                </div>
-                            </div>
-                            <NavLink to={item.to}><span className='block w-full border-2 border-borderColor mt-2 text-center p-1 rounded-md text-blackColor hover:bg-lightOrange hover:text-whiteColor font-bold'>{item.button}</span></NavLink>
+                                <NavLink to={item.to}><span className='block w-full border-2 border-borderColor mt-2 text-center p-1 rounded-md text-blackColor hover:bg-lightOrange hover:text-whiteColor font-bold'>{item.button}</span></NavLink>
                             </div>
                         </SwiperSlide>
                     ))}
