@@ -9,6 +9,8 @@ import TradingProduct from './TradingProduct'
 import PopularComparisons from './PopularComparisons'
 import AppliancesPriceList from './AppliancesPriceList'
 import TopStories from './TopStories'
+import SmartphoneFeatures from './SmartphoneFeatures'
+import CashbackOffers from './CashbackOffers'
 
 function Home() {
   return (
@@ -27,6 +29,8 @@ function Home() {
         <PopularComparisons />
         <TopStories />
         <AppliancesPriceList />
+        <SmartphoneFeatures />
+        <CashbackOffers />
     </div>
   )
 }
