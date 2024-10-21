@@ -30,33 +30,36 @@ function MainFooter() {
                 <h3 className='text-[22px] font-semibold text-lightBackground'>Special Pages</h3>
                 <div className='text-[16px] font-normal text-lightBackground flex flex-col gap-1 mt-1'>
                     <span className='cursor-pointer hover:text-[#b8b8b8]'>Invite Friends</span>
-                    <span className='cursor-pointer hover:text-[#b8b8b8]'>Invite Friends</span>
-                    <span className='cursor-pointer hover:text-[#b8b8b8]'>Invite Friends</span>
-                    <span className='cursor-pointer hover:text-[#b8b8b8]'>Invite Friends</span>
-                    <span className='cursor-pointer hover:text-[#b8b8b8]'>Invite Friends</span>
-                    <span className='cursor-pointer hover:text-[#b8b8b8]'>Invite Friends</span>
+                    <span className='cursor-pointer hover:text-[#b8b8b8]'>Corporate Gifting</span>
+                    <span className='cursor-pointer hover:text-[#b8b8b8]'>Deals Near Me</span>
+                    <span className='cursor-pointer hover:text-[#b8b8b8]'>Citywise Directory</span>
+                    <span className='cursor-pointer hover:text-[#b8b8b8]'>Alphabetical Directory</span>
+                    <span className='cursor-pointer hover:text-[#b8b8b8]'>Refer & Earn</span>
+                    <span className='cursor-pointer hover:text-[#b8b8b8]'>Careers</span>
+                    <span className='cursor-pointer hover:text-[#b8b8b8]'>Donate Cashback</span>
                 </div>
             </div>
             <div>
-                <h3 className='text-[22px] font-semibold text-lightBackground'>Special Pages</h3>
+                <h3 className='text-[22px] font-semibold text-lightBackground'>About</h3>
                 <div className='text-[16px] font-normal text-lightBackground flex flex-col gap-1 mt-1'>
-                    <span className='cursor-pointer hover:text-[#b8b8b8]'>Invite Friends</span>
-                    <span className='cursor-pointer hover:text-[#b8b8b8]'>Invite Friends</span>
-                    <span className='cursor-pointer hover:text-[#b8b8b8]'>Invite Friends</span>
-                    <span className='cursor-pointer hover:text-[#b8b8b8]'>Invite Friends</span>
-                    <span className='cursor-pointer hover:text-[#b8b8b8]'>Invite Friends</span>
-                    <span className='cursor-pointer hover:text-[#b8b8b8]'>Invite Friends</span>
+                    <span className='cursor-pointer hover:text-[#b8b8b8]'>About Us</span>
+                    <span className='cursor-pointer hover:text-[#b8b8b8]'>Contact Us</span>
+                    <span className='cursor-pointer hover:text-[#b8b8b8]'>Press</span>
+                    <span className='cursor-pointer hover:text-[#b8b8b8]'>Blog</span>
+                    <span className='cursor-pointer hover:text-[#b8b8b8]'>Testimonials</span>
+                    <span className='cursor-pointer hover:text-[#b8b8b8]'>FAQ</span>
+                    <span className='cursor-pointer hover:text-[#b8b8b8]'>Sitemap</span>
                 </div>
             </div>
             <div>
-                <h3 className='text-[22px] font-semibold text-lightBackground'>Special Pages</h3>
+                <h3 className='text-[22px] font-semibold text-lightBackground'>Customer List</h3>
                 <div className='text-[16px] font-normal text-lightBackground flex flex-col gap-1 mt-1'>
-                    <span className='cursor-pointer hover:text-[#b8b8b8]'>Invite Friends</span>
-                    <span className='cursor-pointer hover:text-[#b8b8b8]'>Invite Friends</span>
-                    <span className='cursor-pointer hover:text-[#b8b8b8]'>Invite Friends</span>
-                    <span className='cursor-pointer hover:text-[#b8b8b8]'>Invite Friends</span>
-                    <span className='cursor-pointer hover:text-[#b8b8b8]'>Invite Friends</span>
-                    <span className='cursor-pointer hover:text-[#b8b8b8]'>Invite Friends</span>
+                    <span className='cursor-pointer hover:text-[#b8b8b8]'>User Login</span>
+                    <span className='cursor-pointer hover:text-[#b8b8b8]'>User Signup</span>
+                    <span className='cursor-pointer hover:text-[#b8b8b8]'>Dealer Login</span>
+                    <span className='cursor-pointer hover:text-[#b8b8b8]'>Dealer Signup</span>
+                    <span className='cursor-pointer hover:text-[#b8b8b8]'>Become a Partner</span>
+                    <span className='cursor-pointer hover:text-[#b8b8b8]'>Student Program</span>
                 </div>
             </div>
         </div>
