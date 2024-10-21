@@ -7,6 +7,8 @@ import ProductBanner from './ProductBanner'
 import ComparePriceProduct from './ComparePriceProduct'
 import TradingProduct from './TradingProduct'
 import PopularComparisons from './PopularComparisons'
+import AppliancesPriceList from './AppliancesPriceList'
+import TopStories from './TopStories'
 
 function Home() {
   return (
@@ -23,6 +25,8 @@ function Home() {
         <ComparePriceProduct />
         <TradingProduct />
         <PopularComparisons />
+        <TopStories />
+        <AppliancesPriceList />
     </div>
   )
 }
