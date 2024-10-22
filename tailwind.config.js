@@ -20,6 +20,15 @@ module.exports = {
         borderColor: '#EDEFF2',
         lightBackground: '#FCFCFD'
       },
+      keyframes: {
+        ping: {
+          'from': { transform: 'scale(1)' },
+          'to': { transform: 'scale(2)' },
+        },
+      },
+      animation: {
+        ping: 'ping 5s infinite',
+      },
     },
     container: {
       center: true,
