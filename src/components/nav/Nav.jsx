@@ -303,7 +303,7 @@ function Nav() {
 
         <div className='px-2 pl-1 h-[50px] bg-whiteColor flex items-center justify-between gap-[3vw] lg:gap-0'>
           {/* menu mobile devices */}
-          <div className='flex-shrink-0 cursor-pointer' onClick={openMenu}>
+          <div className='flex-shrink-0 cursor-pointer lg:hidden block' onClick={openMenu}>
             <img src={Humburger} alt="" className='w-8' />
           </div>
 
@@ -369,7 +369,7 @@ function Nav() {
 
       {/* mobile list menu  */}
 
-      <div className={`fixed top-[50px] left-0 w-full h-full z-[1000] p-2 transition-all duration-300 ${isOpen ? 'left-0' : 'left-[-100%]'}`}>
+      <div className={`fixed top-[50px] left-0 w-full h-full z-[1000] p-2 transition-all duration-300 ${isOpen ? 'left-0' : 'left-[-100%] lg:hidden block'}`}>
       <div className=' bg-whiteColor px-2 pt-12 rounded-md h-full'>
         <div>
           <div className='grid grid-cols-5 items-end gap-2 mb-3'>
