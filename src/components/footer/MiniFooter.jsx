@@ -7,6 +7,7 @@ import compare4 from '../../assets/image 29.png'
 import compare5 from '../../assets/image 30.png'
 import compare6 from '../../assets/image 35.png'
 import compare7 from '../../assets/image 37.png'
+import { NavLink } from 'react-router-dom'
 
 function MiniFooter() {
     const [toggle, setToggle] = useState(false)
@@ -56,7 +57,7 @@ function MiniFooter() {
 
             {/* mobile mini footer  */}
 
-            {/* <div className='px-2 bg-whiteColor w-full h-[70px] flex items-end fixed bottom-0 left-0 z-50 md:hidden'>
+            <div className='px-2 bg-whiteColor w-full h-[70px] flex items-end fixed bottom-0 left-0 z-50 md:hidden'>
                 <div className='grid grid-cols-5 w-full'>
                     <NavLink to='/' className={({isActive}) => `flex flex-col justify-end items-center py-2 gap-1 ${isActive ? 'text-lightOrange' : 'text-blackColor'}`}>
                         <span className=''>
@@ -107,7 +108,7 @@ function MiniFooter() {
                         <span className='text-[14px] font-medium'>Profile</span>
                     </NavLink>
                 </div>
-            </div> */}
+            </div>
         </>
     )
 }
