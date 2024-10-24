@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useCallback, useEffect, useState } from 'react'
 import DownArrow from '../../assets/downarrow.svg'
 import Home from '../../assets/home.svg'
 import BestOffers from '../../assets/best-offers.svg'
@@ -53,31 +53,31 @@ function NavLinks() {
         // },
     ];
 
-    const [visibleCount, setVisibleCount] = useState(6); 
-    const updateVisibleCount = () => {
-      if (window.innerWidth < 423) {
-        setVisibleCount(4); 
-      } else if (window.innerWidth < 768) {
-        setVisibleCount(6); 
-      } else {
-        setVisibleCount(navItems.length); 
-      }
-    };
-  
+    const [visibleCount, setVisibleCount] = useState(6);
+
+    const updateVisibleCount = useCallback(() => {
+        if (window.innerWidth < 423) {
+          setVisibleCount(4);
+        } else if (window.innerWidth < 768) {
+          setVisibleCount(6);
+        } else {
+          setVisibleCount(navItems.length);
+        }
+     }, [navItems.length]);
+    
     useEffect(() => {
-      updateVisibleCount(); 
-  
+      updateVisibleCount(); // Initial call to update count based on screen size
+    
       const handleResize = () => {
-        updateVisibleCount(); 
+        updateVisibleCount(); // Call on window resize
       };
-  
+    
       window.addEventListener('resize', handleResize);
-      
-      
+    
       return () => {
         window.removeEventListener('resize', handleResize);
       };
-    }, [navItems]);
+    }, [updateVisibleCount]);
   
 
 
