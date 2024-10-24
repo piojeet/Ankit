@@ -7,7 +7,6 @@ import compare4 from '../../assets/image 29.png'
 import compare5 from '../../assets/image 30.png'
 import compare6 from '../../assets/image 35.png'
 import compare7 from '../../assets/image 37.png'
-import { NavLink } from 'react-router-dom'
 
 function MiniFooter() {
     const [toggle, setToggle] = useState(false)

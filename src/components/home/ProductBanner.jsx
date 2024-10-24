@@ -11,9 +11,6 @@ import 'swiper/css/free-mode';
 import { FreeMode, Navigation, Autoplay } from 'swiper/modules'; // Swiper modules
 
 function ProductBanner() {
-    // const [swiper, setSwiper] = useState(null); // Swiper instance
-    // const [isEnd, setIsEnd] = useState(false); // Track if slider reached the end
-    // const [isBeginning, setIsBeginning] = useState(true); // Track if slider is at the beginning
 
     // Array of images to display in the slider
     const priceranges = [
