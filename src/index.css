@@ -47,8 +47,21 @@
   }
 
   .compare-grid {
-    display: grid;
+    /* display: grid; */
     grid-template-columns: 1fr .5fr 1fr;
+  }
+
+  .md-compare-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .text-ellipsis {
+    @apply overflow-hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2; /* Number of lines */
+    text-overflow: ellipsis;
+    overflow: hidden;
   }
 
 }

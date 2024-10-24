@@ -80,8 +80,8 @@ function TradingProduct() {
   return (
     <>
       <div className='my-7'>
-      <div className='flex items-center gap-x-2 leading-none mb-4'>
-      <h3 className='text-[30px] text-blackColor font-semibold px-2 mb-4'>Trending Products</h3>
+      <div className='flex sm:items-center gap-x-2 leading-none mb-4 sm:flex-row flex-col items-start px-2'>
+      <h3 className='md:text-[30px] text-[20px] text-blackColor font-semibold mb-4'>Trending Products</h3>
       <div className='pb-1 text-[18px] font-bold'><span className='text-lightOrange'>₹</span> <span className='text-gray-800 text-opacity-80'>By Price Range</span></div>
       </div>
       <div className='relative px-4'>
@@ -134,11 +134,11 @@ function TradingProduct() {
         )}
       </div>
 
-      <div className='relative px-2 mt-5 grid grid-cols-4 flex-wrap gap-2'>
+      <div className='relative px-2 mt-5 grid xl:grid-cols-4 md:grid-cols-3 grid-cols-2 flex-wrap gap-2'>
         {sortedProductData.map((item) => (
           <div key={item.id} data-box={item.data} className='w-full'>
             <input type="checkbox" id={item.id} className='peer hidden' />
-            <label htmlFor={item.id} className='inline-block w-full text-center px-8 py-2 peer-checked:bg-lightOrange select-none peer-checked:text-whiteColor rounded-md text-[24px] font-bold border-2 border-borderColor cursor-pointer'>{item.price}</label>
+            <label htmlFor={item.id} className='inline-block w-full text-center md:px-8 px-2 py-2 peer-checked:bg-lightOrange select-none peer-checked:text-whiteColor rounded-md xl:text-[24px] md:text-[20px] text-[14px] font-bold border-2 border-borderColor cursor-pointer'>{item.price}</label>
           </div>
         ))}
       </div>

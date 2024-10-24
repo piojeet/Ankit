@@ -20,21 +20,21 @@ import Clogo15 from '../../assets/image 58.png'
 function CashbackOffers() {
 
     const cashbackData = [
-        {id: 'cashback1', SrcImg: Clogo1, cashback: '10% Rewards'},
-        {id: 'cashback2', SrcImg: Clogo2, cashback: '7% Rewards'},
-        {id: 'cashback3', SrcImg: Clogo3, cashback: '6.5% Cashback'},
-        {id: 'cashback4', SrcImg: Clogo4, cashback: '5% Cashback'},
-        {id: 'cashback5', SrcImg: Clogo5, cashback: '3% Cashback'},
-        {id: 'cashback6', SrcImg: Clogo6, cashback: '6.5% Cashback'},
-        {id: 'cashback7', SrcImg: Clogo7, cashback: '8% Cashback'},
-        {id: 'cashback8', SrcImg: Clogo8, cashback: '2.3% Cashback'},
-        {id: 'cashback9', SrcImg: Clogo9, cashback: '1.9% Cashback'},
-        {id: 'cashback10', SrcImg: Clogo10, cashback: '8.9% Cashback'},
-        {id: 'cashback11', SrcImg: Clogo11, cashback: '10% Cashback'},
-        {id: 'cashback12', SrcImg: Clogo12, cashback: '4.9% Cashback'},
-        {id: 'cashback13', SrcImg: Clogo13, cashback: '3.1% Cashback'},
-        {id: 'cashback14', SrcImg: Clogo14, cashback: '4.5% Cashback'},
-        {id: 'cashback15', SrcImg: Clogo15, cashback: '8% Cashback'},
+        { id: 'cashback1', SrcImg: Clogo1, cashback: '10% Rewards' },
+        { id: 'cashback2', SrcImg: Clogo2, cashback: '7% Rewards' },
+        { id: 'cashback3', SrcImg: Clogo3, cashback: '6.5% Cashback' },
+        { id: 'cashback4', SrcImg: Clogo4, cashback: '5% Cashback' },
+        { id: 'cashback5', SrcImg: Clogo5, cashback: '3% Cashback' },
+        { id: 'cashback6', SrcImg: Clogo6, cashback: '6.5% Cashback' },
+        { id: 'cashback7', SrcImg: Clogo7, cashback: '8% Cashback' },
+        { id: 'cashback8', SrcImg: Clogo8, cashback: '2.3% Cashback' },
+        { id: 'cashback9', SrcImg: Clogo9, cashback: '1.9% Cashback' },
+        { id: 'cashback10', SrcImg: Clogo10, cashback: '8.9% Cashback' },
+        { id: 'cashback11', SrcImg: Clogo11, cashback: '10% Cashback' },
+        { id: 'cashback12', SrcImg: Clogo12, cashback: '4.9% Cashback' },
+        { id: 'cashback13', SrcImg: Clogo13, cashback: '3.1% Cashback' },
+        { id: 'cashback14', SrcImg: Clogo14, cashback: '4.5% Cashback' },
+        { id: 'cashback15', SrcImg: Clogo15, cashback: '8% Cashback' },
         // Add more cashbacks here...
     ]
 
@@ -42,26 +42,35 @@ function CashbackOffers() {
         <>
             <div className='my-14'>
                 <div className='flex items-center justify-between px-2'>
-                    <h3 className='text-[30px] text-blackColor font-semibold mb-4'>Latest Smartphone Features</h3>
-                    <div>
-                        <NavLink to='' className={`flex items-center gap-2 text-[20px] text-blackColor`}>
+                    <h3 className='md:text-[30px] text-[20px] text-blackColor font-semibold mb-4'>Latest Smartphone Features</h3>
+                    <div className='hidden md:block'>
+                        <NavLink to='' className={`flex  items-center gap-2 text-[20px] text-blackColor`}>
                             <span>See all</span>
                             <span><img src={ArrowRight} alt="" className='h-7' /></span>
                         </NavLink>
                     </div>
                 </div>
 
-                <div className='grid grid-cols-5 gap-2 px-2'>
-                    {cashbackData.map((cashbackData) => (
-                        <div key={cashbackData.id} className='border-2 border-borderColor text-center'>
-                            <div className='w-fit mx-auto py-2'>
-                                <img src={cashbackData.SrcImg} alt="" className='w-[10vw]' />
+                <div className='grid lg:grid-cols-5 md:grid-cols-3 grid-cols-2 gap-2 px-2'>
+                    {cashbackData
+                        .slice(0, window.innerWidth < 768 ? 6 : cashbackData.length) // mobile par 6 items dikhayein
+                        .map((cashbackData) => (
+                            <div key={cashbackData.id} className='border-2 border-borderColor text-center'>
+                                <div className='w-fit mx-auto py-2'>
+                                    <img src={cashbackData.SrcImg} alt="" className='w-[10vw]' />
+                                </div>
+                                <div className='py-2 border-t-2 border-borderColor md:text-[20px] text-[14px] text-blackColor font-medium bg-[#FCFCFD]'>
+                                    {cashbackData.cashback}
+                                </div>
                             </div>
-                            <div className='py-2 border-t-2 border-borderColor text-[20px] text-blackColor font-medium bg-[#FCFCFD]'>
-                                {cashbackData.cashback}
-                            </div>
-                        </div>
-                    ))}
+                        ))}
+                </div>
+
+
+                <div className='flex items-center justify-center md:hidden mt-4'>
+                    <NavLink to='' className={`flex items-center gap-2 text-[14px] text-whiteColor bg-lightOrange px-4 py-1 rounded-md`}>
+                        <span>See all</span>
+                    </NavLink>
                 </div>
             </div>
         </>

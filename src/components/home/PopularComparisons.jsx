@@ -76,7 +76,7 @@ function PopularComparisons() {
     return (
         <>
             <div className='my-7'>
-                <h3 className='text-[30px] text-blackColor font-semibold px-2 mb-4 mt-9'>Popular Comparisons</h3>
+                <h3 className='md:text-[30px] text-[20px] text-blackColor font-semibold px-2 mb-4 mt-9'>Popular Comparisons</h3>
                 <div className='relative px-4'>
                     <Swiper
                         onSwiper={setSwiper}
@@ -134,9 +134,17 @@ function PopularComparisons() {
 
                 <div className='relative px-2'>
                     <Swiper
-                        slidesPerView={3.7}
+                        slidesPerView={1.3}
                         spaceBetween={8}
                         freeMode={true}
+                        breakpoints={{
+                            767: {
+                              slidesPerView: 2,
+                            },
+                            1024: {
+                              slidesPerView: 3.4,
+                            },
+                          }}
                         navigation={{
                             nextEl: '.swiper-button-next-pc'
                         }}
@@ -151,20 +159,20 @@ function PopularComparisons() {
                                         <span></span>
                                         <div className='flex items-center gap-x-4 justify-center border-b border-borderColor bg-[#EDEFF2]'>
                                             <div className='p-4'>
-                                                <img src={item.leftImgSrc} alt="" className='h-[110px]' />
+                                                <img src={item.leftImgSrc} alt="" className='md:h-[110px] h-[80px]' />
                                             </div>
                                             <span className='inline-flex w-[32px] h-[32px] flex-shrink-0 bg-lightOrange border-2 border-[#E59400] rounded-full items-center justify-center leading-none text-whiteColor font-bold'>VS</span>
                                             <div className='p-4'>
-                                                <img src={item.rightImgSrc} alt="" className='h-[110px]' />
+                                                <img src={item.rightImgSrc} alt="" className='md:h-[110px] h-[80px]' />
                                             </div>
                                         </div>
-                                        <div className='flex flex-col items-center justify-between gap-y-2 border-t border-borderColor text-center font-semibold py-4 text-[22px] text-blackColor'>
+                                        <div className='flex flex-col items-center justify-between gap-y-2 border-t border-borderColor text-center font-semibold py-4 md:text-[22px] text-[13px] text-blackColor'>
                                         
                                                 <div>
                                                     <div>{item.topLabelName}</div>
                                                     <div>{item.topBrandlName}</div>
                                                 </div>
-                                                <span className='inline-flex w-[32px] h-[32px] flex-shrink-0 bg-lightOrange border-2 border-[#E59400] rounded-full items-center justify-center leading-none text-whiteColor font-bold text-[16px]'>VS</span>
+                                                <span className='inline-flex md:w-[32px] md:h-[32px] w-[25px] h-[25px] flex-shrink-0 bg-lightOrange border-2 border-[#E59400] rounded-full items-center justify-center leading-none text-whiteColor font-bold md:text-[16px] text-[10px]'>VS</span>
                                                 <div>
                                                     <div>{item.bottomLabelName}</div>
                                                     <div>{item.bottomBrandlName}</div>

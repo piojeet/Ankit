@@ -19,18 +19,22 @@ function SmartphoneFeatures() {
     return (
         <>
             <div>
-                <h3 className='text-[30px] text-blackColor font-semibold px-2 mb-4'>Latest Smartphone Features</h3>
+                <h3 className='md:text-[30px] text-[20px] text-blackColor font-semibold px-2 mb-4'>Latest Smartphone Features</h3>
 
-                <div className='grid grid-cols-5 px-2 gap-2'>
+                <div className='overflow-hidden'>
+                    <div className='w-full overflow-x-auto'>
+                    <div className='md:grid md:grid-cols-5 px-2 gap-2 flex items-start'>
                     {features.map((feature) => (
-                        <div key={feature.id} className='w-full h-full'>
-                            <div className='w-full h-[9vw]'>
+                        <div key={feature.id} className='md:w-full h-full flex-shrink-0 sm:w-[40%] w-[60%]'>
+                            <div className='w-full md:h-[9vw] h-[20vw]'>
                                 <img src={feature.SrcImg} alt="" className='w-full h-full' />
                             </div>
-                            <div className='text-center text-[22px] font-semibold text-blackColor mt-1'>{feature.title}</div>
-                            <div className='text-center text-[20px] text-blackColor font-medium leading-none'>{feature.disc}</div>
+                            <div className='text-center md:text-[22px] text-[16px] font-semibold text-blackColor mt-1'>{feature.title}</div>
+                            <div className='text-center md:text-[20px] text-[14px] text-blackColor font-medium leading-none'>{feature.disc}</div>
                         </div>
                     ))}
+                </div>
+                    </div>
                 </div>
             </div>
         </>

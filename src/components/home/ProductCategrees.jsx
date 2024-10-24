@@ -60,9 +60,9 @@ function ProductCategrees() {
                         <SwiperSlide key={pricerange.id} className='!w-fit !pl-3'>
                             <div className=''>
                                 <span className='block'>
-                                    <img src={pricerange.imgSrc} alt={pricerange.label} className='w-[70px] h-[70px] aspect-square' />
+                                    <img src={pricerange.imgSrc} alt={pricerange.label} className='md:w-[70px] md:h-[50px] w-[50px] h-[50px] aspect-square' />
                                 </span>
-                                <p className='text-blackColor text-[18px] text-center font-semibold'>{pricerange.label}</p>
+                                <p className='text-blackColor md:text-[18px] text-[16px] text-center font-semibold'>{pricerange.label}</p>
                             </div>
                         </SwiperSlide>
                     ))}

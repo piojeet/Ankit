@@ -35,9 +35,17 @@ function ProductBanner() {
         <div className="px-4 py-5 relative">
             <Swiper
                 // onSwiper={setSwiper} // Get the swiper instance
-                slidesPerView={3} // Number of slides visible at a time
+                slidesPerView={1} // Number of slides visible at a time
                 spaceBetween={40} // Space between slides
                 loop={true} // Infinite loop
+                breakpoints={{
+                    767: {
+                      slidesPerView: 2,
+                    },
+                    1024: {
+                      slidesPerView: 3,
+                    },
+                  }}
                 autoplay={{ delay: 4000, disableOnInteraction: false }} // Autoplay settings
                 modules={[FreeMode, Navigation, Autoplay]} // Swiper modules
                 navigation={{

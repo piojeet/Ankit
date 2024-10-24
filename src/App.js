@@ -6,18 +6,20 @@ import ChatBot from "./components/bot/ChatBot";
 
 function App() {
   return (
-      <>
-      <Router>
-        <div>
-          <Routes>
-            <Route path="/" element={<Home />} />
-          </Routes>
-        </div>
-      </Router>
-      <MainFooter />
-      <MiniFooter />
-      <ChatBot />
-      </>
+    <>
+      <div className="">
+        <Router>
+          <div>
+            <Routes>
+              <Route path="/" element={<Home />} />
+            </Routes>
+          </div>
+        <MainFooter />
+        <MiniFooter />
+        <ChatBot />
+        </Router>
+      </div>
+    </>
   );
 }
 

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import DownArrow from '../../assets/downarrow.svg'
 import Home from '../../assets/home.svg'
 import BestOffers from '../../assets/best-offers.svg'
@@ -53,35 +53,33 @@ function NavLinks() {
         // },
     ];
 
+    const [visibleCount, setVisibleCount] = useState(6); 
+    const updateVisibleCount = () => {
+      if (window.innerWidth < 423) {
+        setVisibleCount(4); 
+      } else if (window.innerWidth < 768) {
+        setVisibleCount(6); 
+      } else {
+        setVisibleCount(navItems.length); 
+      }
+    };
+  
+    useEffect(() => {
+      updateVisibleCount(); 
+  
+      const handleResize = () => {
+        updateVisibleCount(); 
+      };
+  
+      window.addEventListener('resize', handleResize);
+      
+      
+      return () => {
+        window.removeEventListener('resize', handleResize);
+      };
+    }, [navItems]);
+  
 
-    // const [isVisible, setIsVisible] = useState(false); // Initially hidden
-    // const divRef = useRef(null);
-    // const buttonRef = useRef(null); // Ref for the button
-
-    // Toggle visibility when button is clicked
-    // const toggleVisibility = () => {
-    //   setIsVisible(!isVisible); // Toggle between visible and hidden
-    // };
-
-    // Hide the div if clicking outside button or div
-    // useEffect(() => {
-    //   const handleClickOutside = (event) => {
-    // Check if the click is outside the button and the div
-    // if (divRef.current && !divRef.current.contains(event.target) &&
-    // buttonRef.current && !buttonRef.current.contains(event.target)) {
-    //   setIsVisible(false); 
-    // Hide the div if clicking outside
-    // }
-    //   };
-
-    // Add event listener for detecting outside clicks
-    //   document.addEventListener('click', handleClickOutside);
-
-    // Cleanup event listener when component unmounts
-    //   return () => {
-    //     document.removeEventListener('click', handleClickOutside);
-    //   };
-    // }, []);
 
     return (
         <div>
@@ -91,12 +89,12 @@ function NavLinks() {
                 </div>
 
                 <ul className='flex items-center justify-between w-full'>
-                    {navItems.map((item, index) => (
+                    {navItems.slice(0, visibleCount).map((item, index) => (
                         <React.Fragment key={index}>
-                            <span className='w-[1px] h-[25px] bg-whiteColor'></span>
-                            <li className='relative'>
+                            <span className='w-[1px] h-[25px] bg-whiteColor lg:block hidden'></span>
+                            <li className='relative flex-shrink-0'>
                                 <NavLink to='#' className='relative group text-[14px] flex items-center gap-2'>
-                                    <span className='text-whiteColor font-semibold'>{item.title}</span> <span><img src={DownArrow} alt="" /></span>
+                                    <span className='text-whiteColor font-semibold text-[14px] md:text-[14px] whitespace-nowrap'>{item.title}</span> <span className='md:block hidden'><img src={DownArrow} alt="" /></span>
                                     <div className='absolute top-[100%] hidden group-hover:flex flex-col gap-2 whitespace-nowrap bg-buttonColor text-whiteColor py-2 rounded-md left-0'>
                                         {item.dropdownItems.map((dropdownItem, dropdownIndex) => (
                                             <span key={dropdownIndex}><a href="/#" className='px-6'>{dropdownItem}</a></span>
@@ -105,16 +103,25 @@ function NavLinks() {
                                 </NavLink>
 
                             </li>
-                                
+
 
                         </React.Fragment>
                     ))}
 
+                    <li className='relative flex-shrink-0 md:hidden inline-block'>
+                        <NavLink to='3' className='relative group text-[14px] flex items-center gap-2'>
+                            <span className='text-whiteColor font-semibold text-[14px]'>More</span>
+                        </NavLink>
 
-                    <div className='flex items-center justify-between'>
+                    </li>
+
+                    <span className='w-[1px] h-[25px] bg-whiteColor lg:block hidden'></span>
+
+
+                    <div className='lg:flex items-center justify-between hidden'>
                         <li>
                             <NavLink to='#' className='relative group text-[14px] flex items-center gap-2 px-2 h-[40px]'>
-                                <span className='text-whiteColor font-semibold'>Electronics & More</span> <span><img src={DownArrow} alt="" /></span>
+                                <span className='text-whiteColor font-semibold whitespace-nowrap text-[14px]'>Electronics & More</span> <span><img src={DownArrow} alt="" /></span>
                                 <div className={`absolute right-0 top-[100%] z-50 bg-buttonColor w-[800px] hidden items-start justify-between group-hover:flex`}>
                                     <div className='w-full p-4 text-whiteColor'>
                                         <div className='whitespace-nowrap flex items-start justify-between'>
@@ -179,7 +186,7 @@ function NavLinks() {
                         </li>
                         <li>
                             <NavLink to='#' className='relative group text-[14px] flex items-center gap-2 px-2 bg-[#DC4F45] h-[40px]'>
-                                <span className='text-whiteColor font-semibold'>Campare</span> <span><img src={DownArrow} alt="" /></span>
+                                <span className='text-whiteColor font-semibold text-[14px]'>Campare</span> <span><img src={DownArrow} alt="" /></span>
                                 <div className='absolute top-[100%] hidden group-hover:flex flex-col gap-2 whitespace-nowrap bg-[#DC4F45] text-whiteColor py-2 rounded-md left-0'>
 
                                     <span><a href="/#" className='px-6'>Demo 1</a></span>
@@ -192,7 +199,7 @@ function NavLinks() {
 
                         <li>
                             <NavLink to='#' className='relative group text-[14px] flex items-center gap-2 px-2 bg-[#C8DD16] h-[40px]'>
-                                <span className='text-whiteColor font-semibold'>Coupons</span> <span><img src={DownArrow} alt="" /></span>
+                                <span className='text-whiteColor font-semibold text-[14px]'>Coupons</span> <span><img src={DownArrow} alt="" /></span>
                                 <div className='absolute top-[100%] hidden group-hover:flex flex-col gap-2 whitespace-nowrap bg-[#C8DD16] text-whiteColor py-2 rounded-md left-0'>
 
                                     <span><a href="/#" className='px-6'>Demo 1</a></span>

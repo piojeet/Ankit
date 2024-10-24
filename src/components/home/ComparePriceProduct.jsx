@@ -1,12 +1,12 @@
 import React, { useState } from 'react'
 import mobile from '../../assets/307, Banking, Online, Payment, Shopping.svg' // Assuming this is the correct path
-import car from '../../assets/cars.svg' 
-import calender from '../../assets/calender.svg' 
-import bike from '../../assets/bichbike.svg' 
-import laptop from '../../assets/301, Box, Drop Shipper, E-Commerce, Laptop, Online.png' 
-import hotel from '../../assets/hotel.svg' 
-import mashin from '../../assets/macshine.svg' 
-import tablet from '../../assets/765, Screen, Television, Tv.svg' 
+import car from '../../assets/cars.svg'
+import calender from '../../assets/calender.svg'
+import bike from '../../assets/bichbike.svg'
+import laptop from '../../assets/301, Box, Drop Shipper, E-Commerce, Laptop, Online.png'
+import hotel from '../../assets/hotel.svg'
+import mashin from '../../assets/macshine.svg'
+import tablet from '../../assets/765, Screen, Television, Tv.svg'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import CharatOrange from '../../assets/charat-down-orange.svg'
 import Samsang1 from '../../assets/image 11.png'
@@ -78,7 +78,7 @@ function ComparePriceProduct() {
 
     return (
         <>
-            <h3 className='text-[30px] text-blackColor font-semibold px-2 mb-4'>Compare Price and Features </h3>
+            <h3 className='md:text-[30px] text-[20px] text-blackColor font-semibold px-2 mb-4'>Compare Price and Features </h3>
             <div className='relative px-4'>
                 <Swiper
                     onSwiper={setSwiper}
@@ -132,27 +132,35 @@ function ComparePriceProduct() {
 
             <div className='relative px-2'>
                 <Swiper
-                    slidesPerView={3.7}
+                    slidesPerView={1.3}
                     spaceBetween={8}
                     freeMode={true}
+                    grabCursor={true}
                     navigation={{
-                        nextEl: '.swiper-button-next-b'
+                        nextEl: '.swiper-button-next-b',
+                    }}
+                    breakpoints={{
+                        1024: {
+                            slidesPerView: 3.5,
+                        },
+                        424: {
+                            slidesPerView: 2,
+                        },
                     }}
                     modules={[FreeMode, Navigation]}
-                    grabCursor={true}
                     className="mySwiper"
                 >
                     {filteredProductData.map((item) => (
                         <SwiperSlide key={item.id} data-box={item.data}>
                             <div className='my-5'>
-                                <div className='border-2 border-borderColor rounded-md'>
+                                <div className='border-2 border-borderColor rounded-md relative'>
                                     <span></span>
                                     <div className='flex items-center justify-between border-b border-borderColor'>
                                         <div className='flex-1 grid place-items-center p-4'>
-                                            <img src={item.topImgSrc} alt="" className='h-[110px]' />
+                                            <img src={item.topImgSrc} alt="" className='md:h-[110px] h-[80px]' />
                                         </div>
                                         <div className='flex-1 grid place-items-center content-center text-left font-semibold'>
-                                            <div>
+                                            <div className='md:text-[16px] text-[10px] font-semibold text-blackColor'>
                                                 <div>{item.topLabelName}</div>
                                                 <div>{item.topBrandlName}</div>
                                                 <div>{item.topPriceName}</div>
@@ -161,16 +169,18 @@ function ComparePriceProduct() {
                                     </div>
                                     <div className='flex items-center justify-between border-t border-borderColor'>
                                         <div className='flex-1 grid place-items-center content-center text-left font-semibold'>
-                                            <div>
+                                            <div className='md:text-[16px] text-[10px] font-semibold text-blackColor'>
                                                 <div>{item.bottomLabelName}</div>
                                                 <div>{item.bottomBrandlName}</div>
                                                 <div>{item.bottomPriceName}</div>
                                             </div>
                                         </div>
                                         <div className='flex-1 grid place-items-center p-4'>
-                                            <img src={item.bottomImgSrc} alt="" className='h-[110px]' />
+                                            <img src={item.bottomImgSrc} alt="" className='md:h-[110px] h-[80px]' />
                                         </div>
                                     </div>
+
+                                    <span className='border-2 border-borderColor bg-whiteColor md:w-[32px] md:h-[32px] w-[25px] h-[25px] rounded-full absolute font-semibold text-blackColor text-center content-center top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[10px] md:text-[16px]'>VS</span>
                                 </div>
                                 <NavLink to={item.to}><span className='block w-full border-2 border-borderColor mt-2 text-center p-1 rounded-md text-blackColor hover:bg-lightOrange hover:text-whiteColor font-bold'>{item.button}</span></NavLink>
                             </div>

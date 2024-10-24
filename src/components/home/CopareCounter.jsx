@@ -133,13 +133,13 @@ function CopareCounter() {
                     <div className='flex-shrink-0 w-[30px] h-[30px] border-borderColor border bg-lightBackground flex items-center justify-center cursor-pointer swiper-button-next'><img src={CharatOrange} alt="" className='w-5 -rotate-90' /></div>
                 </div>
 
-                <div className='flex items-center justify-between gap-x-5 my-5 mb-3'>
+                <div className='flex items-center justify-between gap-x-5 my-5 mb-3 md:flex-row flex-col'>
                     <p className='text-blackColor font-semibold whitespace-nowrap'>Price Range</p>
                     <div className='w-full'>
                         <div className="range-slider" ref={sliderRef}>
 
 
-                            <div className="range grid max-w-[350px] w-full relative z-10">
+                            <div className="range grid xl:max-w-[350px] max-w-[750px] w-full relative z-10 mx-auto md:mx-0">
                                 <input
                                     type="range"
                                     className="min-input"
@@ -184,12 +184,12 @@ function CopareCounter() {
                 </div>
 
                 <div>
-                    <div className='flex items-center justify-center gap-x-5'>
+                    <div className='flex items-center justify-center md:gap-x-5 gap-x-2'>
                         <div className='border border-borderColor bg-lightBackground w-fit'>
                             <span className='inline-flex justify-center items-center w-[32px] h-[32px] border border-borderColor bg-lightBackground text-[14px] text-blackColor font-medium'>Rs</span>
                             <input
                                 type="number"
-                                className="min-price appearance-none outline-none text-[14px] text-blackColor font-medium"
+                                className="min-price appearance-none outline-none text-[14px] text-blackColor font-medium text-center"
                                 ref={minPriceInputRef}
                                 value={minValue}
                                 min="1000"
@@ -202,7 +202,7 @@ function CopareCounter() {
                             <span className='inline-flex justify-center items-center w-[32px] h-[32px] border border-borderColor bg-lightBackground text-[14px] text-blackColor font-medium'>Rs</span>
                             <input
                                 type="number"
-                                className="max-price appearance-none outline-none text-[14px] text-blackColor font-medium"
+                                className="max-price appearance-none outline-none text-[14px] text-blackColor font-medium text-center"
                                 ref={maxPriceInputRef}
                                 value={maxValue}
                                 min="2000"
@@ -213,8 +213,8 @@ function CopareCounter() {
                     </div>
                 </div>
 
-                <div className='flex items-start gap-x-12 mt-5'>
-                    <span className='text-blackColor font-semibold whitespace-nowrap'>Features</span>
+                <div className='flex items-start md:gap-x-12 gap-x-5 mt-5 md:flex-row flex-col'>
+                    <span className='text-blackColor font-semibold whitespace-nowrap md:w-fit w-full text-center md:text-left mb-2 md:mb-0'>Features</span>
                     <div className='flex items-start gap-2 flex-wrap'>
 
                         {features.map((feature) => (
@@ -229,7 +229,7 @@ function CopareCounter() {
                 </div>
 
                 <div>
-                    <button type='submit' className='w-fit block px-7 bg-[#5DB506] text-whiteColor font-semibold py-2.5 rounded-md ml-auto'>Search</button>
+                    <button type='submit' className='w-fit block px-7 md:bg-[#5DB506] text-whiteColor font-semibold py-2.5 rounded-md md:ml-auto md:mx-0 mt-2 md:mt-0 mx-auto bg-lightOrange'>Search</button>
                 </div>
             </form>
         </div>
