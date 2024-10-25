@@ -244,6 +244,17 @@ function Nav() {
   };
 
 
+  const [isDivVisible, setIsDivVisible] = useState(false);
+
+  const openSearch = () => {
+    setIsDivVisible(true);
+  }
+
+  const closeSearch = () => {
+    setIsDivVisible(false);
+  }
+
+
   return (
     <div>
       <header className=''>
@@ -358,7 +369,7 @@ function Nav() {
             <div className='flex-shrink-0 w-[36px] h-[36px] bg-[#F1F6FC] rounded-full flex items-center justify-center cursor-pointer'>
             <img src={User} alt="" className='w-6' />
             </div>
-            <div className='flex-shrink-0 w-[36px] h-[36px] bg-[#F1F6FC] rounded-full flex items-center justify-center cursor-pointer'>
+            <div className='flex-shrink-0 w-[36px] h-[36px] bg-[#F1F6FC] rounded-full flex items-center justify-center cursor-pointer' onClick={openSearch}>
             <img src={SearchMb} alt="" className='w-6' />
             </div>
           </div>
@@ -484,6 +495,19 @@ function Nav() {
             </div>
       </div>
       </div>
+
+<form className={`fixed top-0 h-[50px] bg-buttonColor z-[999] items-center justify-center px-2 w-full ${isDivVisible ? 'flex' : 'hidden'}`}>
+  <div className='w-full flex items-center justify-between gap-2'>
+  <div className='flex items-center bg-whiteColor w-[80%] rounded-md'>
+    <span className='p-2'><img src={SearchMb} alt="" /></span>
+    <input type="text" placeholder='Location: City, State, Zip' className='h-[35px] outline-none border-none px-1' />
+  </div>
+  <div className='cursor-pointer' onClick={closeSearch}>
+    <img src={Close} alt="" className='invert' />
+  </div>
+  </div>
+</form>
+
     </div>
   )
 }
