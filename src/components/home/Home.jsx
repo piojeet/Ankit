@@ -24,13 +24,15 @@ function Home() {
         </div>
         <ProductCategrees />
         <ProductBanner />
+        <div className='mb-7'>
+        <SmartphoneFeatures />
+        </div>
         <ComparePriceProduct />
         <TradingProduct />
         <PopularComparisons />
         <TopStories />
-        <AppliancesPriceList />
-        <SmartphoneFeatures />
         <CashbackOffers />
+        <AppliancesPriceList />
     </div>
   )
 }

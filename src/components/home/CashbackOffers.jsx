@@ -40,7 +40,7 @@ function CashbackOffers() {
 
     return (
         <>
-            <div className='my-14'>
+            <div className='my-14 mb-8'>
                 <div className='flex items-center justify-between px-2'>
                     <h3 className='md:text-[30px] text-[20px] text-blackColor font-semibold mb-4'>Latest Smartphone Features</h3>
                     <div className='hidden md:block'>

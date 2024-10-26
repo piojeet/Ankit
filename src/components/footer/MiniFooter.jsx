@@ -48,7 +48,7 @@ function MiniFooter() {
                             <div className='flex items-center w-full h-[40px]'>
                                 <div className='text-lightBackground font-semibold text-[18px] h-full content-center bg-lightOrange px-4 rounded-s-md w-fit flex-shrink-0 block text-nowrap text-center cursor-pointer'><span>Subscribe</span></div>
                                 <input type="text" placeholder='Enter your email' className='w-full block h-full outline-none px-4 text-[18px] text-blackColor' />
-                                <div className='text-lightBackground font-semibold text-[18px] h-full content-center bg-lightOrange px-4 rounded-e-md w-fit flex-shrink-0 block text-nowrap text-center cursor-pointer'><span>Subscribe</span></div>
+                                <div className='text-lightBackground font-semibold text-[18px] h-full content-center bg-lightOrange px-4 rounded-e-md w-fit flex-shrink-0 block text-nowrap text-center cursor-pointer'><span>Submit</span></div>
                             </div>
                         </form>
                     </div>

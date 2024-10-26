@@ -225,12 +225,15 @@ function CopareCounter() {
                                 </label>
                             </div>
                         ))}
+
+                         <div>
+                    <button type='submit' className='w-fit block px-7 md:bg-[#5DB506] text-whiteColor font-semibold py-2 rounded-md md:ml-auto md:mx-0 md:mt-0 mx-auto bg-lightOrange'>Search</button>
+                </div>
+
                     </div>
                 </div>
 
-                <div>
-                    <button type='submit' className='w-fit block px-7 md:bg-[#5DB506] text-whiteColor font-semibold py-2.5 rounded-md md:ml-auto md:mx-0 mt-2 md:mt-0 mx-auto bg-lightOrange'>Search</button>
-                </div>
+               
             </form>
         </div>
     );

@@ -65,14 +65,14 @@ function AppliancesPriceList() {
 
   return (
     <>
-      <div className='my-14'>
-        <h3 className='md:text-[30px] text-[20px] text-blackColor font-semibold px-2 mb-4'>Best Appliances Price List</h3>
+      <div className='my-8 mt-0'>
+        <h3 className='md:text-[25px] text-[20px] text-blackColor font-semibold px-2 mb-4'>Best Appliances Price List</h3>
 
         <div className='grid lg:grid-cols-3 md:grid-cols-2 px-2 gap-x-2'>
           <div className='flex gap-0.5 flex-col'>
           {priceList1.map((priceList1) => (
             <div key={priceList1.id}>
-              <NavLink to={priceList1.to} className='flex items-center gap-2 hover:text-buttonColor md:text-[17px] text-[14px]'>
+              <NavLink to={priceList1.to} className='flex items-center gap-2 hover:text-buttonColor md:text-[16px] text-[14px]'>
                 <span><img src={Arrow} alt="" className='w-2 invert -rotate-90' /></span>
                 <span>{priceList1.title}</span>
               </NavLink>
@@ -83,7 +83,7 @@ function AppliancesPriceList() {
           <div className='flex gap-0.5 flex-col'>
           {priceList2.map((priceList2) => (
             <div key={priceList2.id}>
-              <NavLink to={priceList2.to} className='flex items-center gap-2 hover:text-buttonColor md:text-[17px] text-[14px]'>
+              <NavLink to={priceList2.to} className='flex items-center gap-2 hover:text-buttonColor md:text-[16px] text-[14px]'>
               <span><img src={Arrow} alt="" className='w-2 invert -rotate-90' /></span>
                 <span>{priceList2.title}</span>
               </NavLink>
@@ -94,7 +94,7 @@ function AppliancesPriceList() {
           <div className='flex gap-0.5 flex-col'>
           {priceList3.map((priceList3) => (
             <div key={priceList3.id}>
-              <NavLink to={priceList3.to} className='flex items-center gap-2 hover:text-buttonColor md:text-[17px] text-[14px]'>
+              <NavLink to={priceList3.to} className='flex items-center gap-2 hover:text-buttonColor md:text-[16px] text-[14px]'>
               <span><img src={Arrow} alt="" className='w-2 invert -rotate-90' /></span>
                 <span>{priceList3.title}</span>
               </NavLink>

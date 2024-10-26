@@ -7,7 +7,6 @@ import laptop from '../../assets/301, Box, Drop Shipper, E-Commerce, Laptop, Onl
 import hotel from '../../assets/hotel.svg'
 import mashin from '../../assets/macshine.svg'
 import tablet from '../../assets/765, Screen, Television, Tv.svg'
-import { Swiper, SwiperSlide } from 'swiper/react';
 import CharatOrange from '../../assets/charat-down-orange.svg'
 import Samsang1 from '../../assets/image 11.png'
 import Samsang2 from '../../assets/image 15.png'
@@ -18,6 +17,7 @@ import Bike2 from '../../assets/pngwing.com (20) 1.png'
 import Laptop1 from '../../assets/pngwing.com (29).png'
 import Laptop2 from '../../assets/pngwing.com (27).png'
 import Arrow from '../../assets/downarrow.svg';
+import { Swiper, SwiperSlide } from 'swiper/react';
 
 
 // Import Swiper styles
@@ -55,7 +55,7 @@ function ComparePriceProduct() {
         { id: 'box2', topLabelName: 'Proton X70', topBrandlName: 'Executive AWD', topPriceName: 'Rs. 87.99 lacs', topImgSrc: Car1, button: 'Compare Now', bottomLabelName: 'MG HS', bottomBrandlName: '1.5 Turbo', bottomPriceName: 'Rs. 89 lacs', bottomImgSrc: Car2, data: 'cars', to: '/#' },
         { id: 'box3', topLabelName: 'Proton X70', topBrandlName: 'Executive AWD', topPriceName: 'Rs. 87.99 lacs', topImgSrc: Bike1, button: 'Compare Now', bottomLabelName: 'MG HS', bottomBrandlName: '1.5 Turbo', bottomPriceName: 'Rs. 89 lacs', bottomImgSrc: Bike2, data: 'Bikes', to: '/#' },
         { id: 'box4', topLabelName: 'ASUS', topBrandlName: 'GL702 i7', topPriceName: 'Rs. 46,000', topImgSrc: Laptop1, button: 'Compare Now', bottomLabelName: 'Samsung', bottomBrandlName: 'Intel Core i7', bottomPriceName: 'Rs. 45,000', bottomImgSrc: Laptop2, data: 'Laptops', to: '/#' },
-        // { id: 'box5', topLabelName: 'Samsang', topBrandlName: 'Galaxy S23 5G', topPriceName: 'Rs. 1 Lac', topImgSrc: Samsang1, button: 'Compare Now', bottomLabelName: 'Samsang', bottomBrandlName: 'Galaxy S23 5G', bottomPriceName: 'Rs. 1 Lac', bottomImgSrc: Samsang2, data: 'mobiles' },
+        { id: 'box5', topLabelName: 'Samsang', topBrandlName: 'Galaxy S23 5G', topPriceName: 'Rs. 1 Lac', topImgSrc: Samsang1, button: 'Compare Now', bottomLabelName: 'Samsang', bottomBrandlName: 'Galaxy S23 5G', bottomPriceName: 'Rs. 1 Lac', bottomImgSrc: Samsang2, data: 'mobiles' },
         // { id: 'box6', topLabelName: 'Samsang', topBrandlName: 'Galaxy S23 5G', topPriceName: 'Rs. 1 Lac', topImgSrc: Samsang1, button: 'Compare Now', bottomLabelName: 'Samsang', bottomBrandlName: 'Galaxy S23 5G', bottomPriceName: 'Rs. 1 Lac', bottomImgSrc: Samsang2, data: 'mobiles' },
     ]
 
@@ -78,7 +78,7 @@ function ComparePriceProduct() {
 
     return (
         <>
-            <h3 className='md:text-[30px] text-[20px] text-blackColor font-semibold px-2 mb-4'>Compare Price and Features </h3>
+            <h3 className='md:text-[25px] text-[20px] text-blackColor font-semibold px-2 mb-4'>Compare Price and Features </h3>
             <div className='relative px-4'>
                 <Swiper
                     onSwiper={setSwiper}
@@ -109,8 +109,8 @@ function ComparePriceProduct() {
                                     data-filter={item.data} // Changed 'pricerange.id' to 'item.id'
                                 />
                                 <label htmlFor={item.id} className='peer-checked:text-lightBackground font-semibold peer-checked:bg-lightOrange flex items-center gap-x-1 px-2 py-1 rounded-md border border-[#EDEFF2] bg-[#FCFCFD] text-blackColor cursor-pointer' data-filter={item.data}>
-                                    <span><img src={item.imgSrc} alt="" className='w-7 h-7 flex-shrink-0 aspect-square' /></span>
-                                    <span className='text-[18px]'>{item.label}</span>
+                                    <span><img src={item.imgSrc} alt="" className='w-5 h-5 flex-shrink-0 aspect-square' /></span>
+                                    <span className='text-[14px]'>{item.label}</span>
                                 </label>
                             </div>
                         </SwiperSlide>
@@ -141,7 +141,7 @@ function ComparePriceProduct() {
                     }}
                     breakpoints={{
                         1024: {
-                            slidesPerView: 3.5,
+                            slidesPerView: 4.3,
                         },
                         424: {
                             slidesPerView: 2,
@@ -157,13 +157,13 @@ function ComparePriceProduct() {
                                     <span></span>
                                     <div className='flex items-center justify-between border-b border-borderColor'>
                                         <div className='flex-1 grid place-items-center p-4'>
-                                            <img src={item.topImgSrc} alt="" className='md:h-[110px] h-[80px]' />
+                                            <img src={item.topImgSrc} alt="" className='md:h-[60px] h-[40px]' />
                                         </div>
                                         <div className='flex-1 grid place-items-center content-center text-left font-semibold'>
                                             <div className='md:text-[16px] text-[10px] font-semibold text-blackColor'>
                                                 <div>{item.topLabelName}</div>
                                                 <div>{item.topBrandlName}</div>
-                                                <div>{item.topPriceName}</div>
+                                                <div className='text-gray-400 md:text-[14px] text-[10px]'>{item.topPriceName}</div>
                                             </div>
                                         </div>
                                     </div>
@@ -172,17 +172,17 @@ function ComparePriceProduct() {
                                             <div className='md:text-[16px] text-[10px] font-semibold text-blackColor'>
                                                 <div>{item.bottomLabelName}</div>
                                                 <div>{item.bottomBrandlName}</div>
-                                                <div>{item.bottomPriceName}</div>
+                                                <div className='text-gray-400 md:text-[14px] text-[10px]'>{item.bottomPriceName}</div>
                                             </div>
                                         </div>
                                         <div className='flex-1 grid place-items-center p-4'>
-                                            <img src={item.bottomImgSrc} alt="" className='md:h-[110px] h-[80px]' />
+                                            <img src={item.bottomImgSrc} alt="" className='md:h-[60px] h-[40px]' />
                                         </div>
                                     </div>
 
                                     <span className='border-2 border-borderColor bg-whiteColor md:w-[32px] md:h-[32px] w-[25px] h-[25px] rounded-full absolute font-semibold text-blackColor text-center content-center top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[10px] md:text-[16px]'>VS</span>
                                 </div>
-                                <NavLink to={item.to}><span className='block w-full border-2 border-borderColor mt-2 text-center p-1 rounded-md text-blackColor hover:bg-lightOrange hover:text-whiteColor font-bold'>{item.button}</span></NavLink>
+                                <NavLink to={item.to}><span className='block w-full border-2 border-borderColor mt-2 text-center p-1 rounded-md text-blackColor hover:bg-lightOrange hover:text-whiteColor font-bold text-[14px]'>{item.button}</span></NavLink>
                             </div>
                         </SwiperSlide>
                     ))}

@@ -20,10 +20,10 @@ function MainFooter() {
 
     return (
         <>
-            <div className='px-2 bg-buttonColor pb-20 pt-5'>
+            <div className='px-2 bg-buttonColor pb-24 pt-5 relative'>
                 <div className='flex justify-start items-start gap-x-[8vw] md:flex-row flex-col border-b-2 border-[#ffffff3d] md:border-b-0 pb-8 md:pb-0'>
                     <div className='max-w-[400px] w-full'>
-                        <div className='mb-4'><span className=' bg-lightBackground block w-fit rounded-md'><img src={Logo} alt="" className='md:w-fit w-[60vw]' /></span></div>
+                        <div className='mb-4 md:block hidden'><span className=' bg-lightBackground block w-fit rounded-md'><img src={Logo} alt="" className='md:w-fit w-[60vw]' /></span></div>
                         <p className='text-[16px] text-lightBackground font-normal hidden md:block'>Our portal combining more than 250 online stores lets you compare prices of a wide variety of products, creates price alert, and in addition to that give back Munafa points which can be redeemed in various forms.</p>
                         <div className='md:flex items-center gap-2 mt-2 hidden'>
                             <span><a href="/#"><img src={FaceBook} alt="" /></a></span>
@@ -127,6 +127,8 @@ function MainFooter() {
                     <span><a href="/#"><img src={Pinterest} alt="" /></a></span>
                     <span><a href="/#"><img src={Google} alt="" /></a></span>
                 </div>
+
+                <div className='mb-4 block md:hidden absolute bottom-24 right-2'><span className=' bg-lightBackground block w-fit rounded-md'><img src={Logo} alt="" className='md:w-fit w-[30vw]' /></span></div>
             </div>
         </>
     )

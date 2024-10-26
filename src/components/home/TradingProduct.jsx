@@ -81,8 +81,8 @@ function TradingProduct() {
     <>
       <div className='my-7'>
       <div className='flex sm:items-center gap-x-2 leading-none mb-4 sm:flex-row flex-col items-start px-2'>
-      <h3 className='md:text-[30px] text-[20px] text-blackColor font-semibold mb-4'>Trending Products</h3>
-      <div className='pb-1 text-[18px] font-bold'><span className='text-lightOrange'>₹</span> <span className='text-gray-800 text-opacity-80'>By Price Range</span></div>
+      <h3 className='md:text-[25px] text-[20px] text-blackColor font-semibold mb-4'>Trending Products</h3>
+      <div className='pb-1 text-[16px] font-bold'><span className='text-lightOrange'>₹</span> <span className='text-gray-800 text-opacity-80'>By Price Range</span></div>
       </div>
       <div className='relative px-4'>
         <Swiper
@@ -112,8 +112,8 @@ function TradingProduct() {
                   checked={selectedProduct === item.id}
                 />
                 <label htmlFor={item.id} className='peer-checked:text-lightBackground font-semibold peer-checked:bg-lightOrange flex items-center gap-x-1 px-2 py-1 rounded-md border border-[#EDEFF2] bg-[#FCFCFD] text-blackColor cursor-pointer'>
-                  <span><img src={item.imgSrc} alt="" className='w-7 h-7' /></span>
-                  <span className='text-[18px]'>{item.label}</span>
+                  <span><img src={item.imgSrc} alt="" className='w-5 h-5' /></span>
+                  <span className='text-[14px]'>{item.label}</span>
                 </label>
               </div>
             </SwiperSlide>
@@ -138,7 +138,7 @@ function TradingProduct() {
         {sortedProductData.map((item) => (
           <div key={item.id} data-box={item.data} className='w-full'>
             <input type="checkbox" id={item.id} className='peer hidden' />
-            <label htmlFor={item.id} className='inline-block w-full text-center md:px-8 px-2 py-2 peer-checked:bg-lightOrange select-none peer-checked:text-whiteColor rounded-md xl:text-[24px] md:text-[20px] text-[14px] font-bold border-2 border-borderColor cursor-pointer'>{item.price}</label>
+            <label htmlFor={item.id} className='inline-block w-full text-center md:px-8 px-2 py-2 peer-checked:bg-lightOrange select-none peer-checked:text-whiteColor rounded-md xl:text-[20px] md:text-[20px] text-[14px] font-bold border-2 border-borderColor cursor-pointer'>{item.price}</label>
           </div>
         ))}
       </div>

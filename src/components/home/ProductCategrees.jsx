@@ -36,15 +36,17 @@ function ProductCategrees() {
         { id: 'product10', label: 'Tablets', imgSrc: Tablet },
         { id: 'product11', label: 'demo 5', imgSrc: Bag },
         { id: 'product12', label: 'demo 6', imgSrc: Bag },
+        { id: 'product13', label: 'demo 6', imgSrc: Bag },
+        { id: 'product14', label: 'demo 6', imgSrc: Bag },
     ];
 
     return (
         <>
-            <div className='px-12 py-5 relative'>
+            <div className='px-12 md:py-5 py-2 relative'>
                 <Swiper
                     onSwiper={setSwiper}
                     slidesPerView="auto"
-                    spaceBetween={40}
+                    spaceBetween={30}
                     freeMode={true}
                     modules={[FreeMode, Navigation]}
                     // grabCursor={true}
@@ -58,11 +60,11 @@ function ProductCategrees() {
                 >
                     {priceranges.map((pricerange) => (
                         <SwiperSlide key={pricerange.id} className='!w-fit !pl-3'>
-                            <div className=''>
+                            <div className='flex flex-col items-center justify-center'>
                                 <span className='block'>
-                                    <img src={pricerange.imgSrc} alt={pricerange.label} className='md:w-[70px] md:h-[50px] w-[50px] h-[50px] aspect-square' />
+                                    <img src={pricerange.imgSrc} alt={pricerange.label} className='md:w-[60px] md:h-[60px] w-[50px] h-[50px] aspect-square' />
                                 </span>
-                                <p className='text-blackColor md:text-[18px] text-[16px] text-center font-semibold'>{pricerange.label}</p>
+                                <p className='text-blackColor md:text-[16px] text-[14px] text-center font-semibold'>{pricerange.label}</p>
                             </div>
                         </SwiperSlide>
                     ))}

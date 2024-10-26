@@ -15,10 +15,10 @@ function ChatBot() {
 
   return (
     <>
-      <div className='fixed bottom-1/4 left-2 z-20'>
+      <div className='fixed bottom-[13%] md:bottom-[25%] left-2 z-20'>
         <div>
           {/* Container with fixed size and border for chatbot */}
-          <div className='w-[160px] h-[40px] bg-whiteColor rounded-md border-2 border-lightOrange flex items-center justify-between px-3 cursor-pointer'>
+          <div className='w-[150px] h-[40px] bg-whiteColor rounded-md border-2 border-lightOrange flex items-center justify-between px-3 cursor-pointer'>
             <div className='content-center flex items-center justify-center relative'>
               {/* Displaying a star icon */}
               <span className='inline-flex w-[25px] h-[25px] bg-lightOrange flex-shrink-0 items-center justify-center rounded-full relative z-20'>

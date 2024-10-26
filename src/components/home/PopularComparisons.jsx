@@ -52,7 +52,7 @@ function PopularComparisons() {
         { id: 'PCbox2', topLabelName: 'Samsung Galaxy', topBrandlName: 'M55s', leftImgSrc: Samsang3, bottomLabelName: 'Samsang Glaxy', bottomBrandlName: 'M56s', rightImgSrc: Samsang4, data: 'PCmobiles', to: '/#' },
         { id: 'PCbox3', topLabelName: 'Samsang Glaxy', topBrandlName: 'S23 5G', leftImgSrc: Samsang1, bottomLabelName: 'Samsang Glaxy', bottomBrandlName: 'S23 5G', rightImgSrc: Samsang2, data: 'PCmobiles', to: '/#' },
         { id: 'PCbox4', topLabelName: 'Samsang Glaxy', topBrandlName: 'M55s', leftImgSrc: Samsang3, bottomLabelName: 'Samsang Glaxy', bottomBrandlName: 'M55s', rightImgSrc: Samsang4, data: 'PCmobiles', to: '/#' },
-        // { id: 'box5', topLabelName: 'Samsang', topBrandlName: 'Galaxy S23 5G', topPriceName: 'Rs. 1 Lac', leftImgSrc: Samsang1, button: 'Compare Now', bottomLabelName: 'Samsang', bottomBrandlName: 'Galaxy S23 5G', bottomPriceName: 'Rs. 1 Lac', rightImgSrc: Samsang2, data: 'mobiles' },
+        { id: 'box5', topLabelName: 'Samsang', topBrandlName: 'Galaxy S23 5G', topPriceName: 'Rs. 1 Lac', leftImgSrc: Samsang1, button: 'Compare Now', bottomLabelName: 'Samsang', bottomBrandlName: 'Galaxy S23 5G', bottomPriceName: 'Rs. 1 Lac', rightImgSrc: Samsang2, data: 'mobiles' },
         // { id: 'box6', topLabelName: 'Samsang', topBrandlName: 'Galaxy S23 5G', topPriceName: 'Rs. 1 Lac', leftImgSrc: Samsang1, button: 'Compare Now', bottomLabelName: 'Samsang', bottomBrandlName: 'Galaxy S23 5G', bottomPriceName: 'Rs. 1 Lac', rightImgSrc: Samsang2, data: 'mobiles' },
     ]
 
@@ -76,7 +76,7 @@ function PopularComparisons() {
     return (
         <>
             <div className='my-7'>
-                <h3 className='md:text-[30px] text-[20px] text-blackColor font-semibold px-2 mb-4 mt-9'>Popular Comparisons</h3>
+                <h3 className='md:text-[25px] text-[20px] text-blackColor font-semibold px-2 mb-4 mt-9'>Popular Comparisons</h3>
                 <div className='relative px-4'>
                     <Swiper
                         onSwiper={setSwiper}
@@ -111,8 +111,8 @@ function PopularComparisons() {
                                         className="peer-checked:text-lightBackground font-semibold peer-checked:bg-lightOrange flex items-center gap-x-1 px-2 py-1 rounded-md border border-[#EDEFF2] bg-[#FCFCFD] text-blackColor cursor-pointer"
                                         data-filter={item.data}
                                     >
-                                        <span><img src={item.imgSrc} alt="" className="w-7 h-7" /></span>
-                                        <span className="text-[18px]">{item.label}</span>
+                                        <span><img src={item.imgSrc} alt="" className="w-5 h-5" /></span>
+                                        <span className="text-[14px]">{item.label}</span>
                                     </label>
                                 </div>
                             </SwiperSlide>
@@ -139,10 +139,10 @@ function PopularComparisons() {
                         freeMode={true}
                         breakpoints={{
                             767: {
-                              slidesPerView: 2,
+                              slidesPerView: 2.3,
                             },
                             1024: {
-                              slidesPerView: 3.4,
+                              slidesPerView: 4.4,
                             },
                           }}
                         navigation={{
@@ -159,20 +159,20 @@ function PopularComparisons() {
                                         <span></span>
                                         <div className='flex items-center gap-x-4 justify-center border-b border-borderColor bg-[#EDEFF2]'>
                                             <div className='p-4'>
-                                                <img src={item.leftImgSrc} alt="" className='md:h-[110px] h-[80px]' />
+                                                <img src={item.leftImgSrc} alt="" className='md:h-[70px] h-[50px]' />
                                             </div>
-                                            <span className='inline-flex w-[32px] h-[32px] flex-shrink-0 bg-lightOrange border-2 border-[#E59400] rounded-full items-center justify-center leading-none text-whiteColor font-bold'>VS</span>
+                                            <span className='inline-flex w-[28px] h-[28px] flex-shrink-0 bg-lightOrange border-2 border-[#E59400] rounded-full items-center justify-center leading-none text-whiteColor font-bold md:text-[14px] text-[10px]'>VS</span>
                                             <div className='p-4'>
-                                                <img src={item.rightImgSrc} alt="" className='md:h-[110px] h-[80px]' />
+                                                <img src={item.rightImgSrc} alt="" className='md:h-[70px] h-[50px]' />
                                             </div>
                                         </div>
-                                        <div className='flex flex-col items-center justify-between gap-y-2 border-t border-borderColor text-center font-semibold py-4 md:text-[22px] text-[13px] text-blackColor'>
+                                        <div className='flex flex-col items-center justify-between gap-y-2 border-t border-borderColor text-center font-semibold py-4 md:text-[18px] text-[13px] text-blackColor'>
                                         
                                                 <div>
                                                     <div>{item.topLabelName}</div>
                                                     <div>{item.topBrandlName}</div>
                                                 </div>
-                                                <span className='inline-flex md:w-[32px] md:h-[32px] w-[25px] h-[25px] flex-shrink-0 bg-lightOrange border-2 border-[#E59400] rounded-full items-center justify-center leading-none text-whiteColor font-bold md:text-[16px] text-[10px]'>VS</span>
+                                                <span className='inline-flex md:w-[28px] md:h-[28px] w-[25px] h-[25px] flex-shrink-0 bg-lightOrange border-2 border-[#E59400] rounded-full items-center justify-center leading-none text-whiteColor font-bold md:text-[14px] text-[10px]'>VS</span>
                                                 <div>
                                                     <div>{item.bottomLabelName}</div>
                                                     <div>{item.bottomBrandlName}</div>

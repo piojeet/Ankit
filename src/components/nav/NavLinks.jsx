@@ -84,58 +84,58 @@ function NavLinks() {
     return (
         <div>
             <div className='flex items-center justify-between h-[40px] bg-buttonColor px-4 gap-5 z-20'>
-                <div className='flex items-center justify-center h-[32px] w-[32px] rounded-md flex-shrink-0 bg-whiteColor'>
+                {/* <div className='flex items-center justify-center h-[32px] w-[32px] rounded-md flex-shrink-0 bg-whiteColor'>
                     <img src={Home} alt="" />
-                </div>
+                </div> */}
 
                 <ul className='flex items-center justify-between w-full'>
                     {navItems.slice(0, visibleCount).map((item, index) => (
                         <React.Fragment key={index}>
-                            <span className='w-[1px] h-[25px] bg-whiteColor lg:block hidden'></span>
+                            
                             <li className='relative flex-shrink-0'>
-                                <NavLink to='#' className='relative group text-[14px] flex items-center gap-2'>
-                                    <span className='text-whiteColor font-semibold text-[14px] md:text-[14px] whitespace-nowrap'>{item.title}</span> <span className='md:block hidden'><img src={DownArrow} alt="" /></span>
-                                    <div className='absolute top-[100%] hidden group-hover:flex flex-col gap-2 whitespace-nowrap bg-buttonColor text-whiteColor py-2 rounded-md left-0'>
+                                <NavLink to='#' className='relative group flex items-center gap-2'>
+                                    <span className='text-whiteColor font-semibold text-[10px] md:text-[12px] whitespace-nowrap'>{item.title}</span> <span className='md:block hidden'><img src={DownArrow} alt="" className='w-2.5' /></span>
+                                    <div className='absolute top-[100%] hidden group-hover:md:flex flex-col gap-2 whitespace-nowrap bg-buttonColor text-whiteColor py-2 rounded-md left-0'>
                                         {item.dropdownItems.map((dropdownItem, dropdownIndex) => (
-                                            <span key={dropdownIndex}><a href="/#" className='px-6'>{dropdownItem}</a></span>
+                                            <span key={dropdownIndex}><NavLink className='px-6'><span className='md:text-[12px] text-[10px]'>{dropdownItem}</span></NavLink></span>
                                         ))}
                                     </div>
                                 </NavLink>
 
                             </li>
-
+                            <span className='w-[1px] h-[25px] bg-whiteColor lg:block hidden'></span>
 
                         </React.Fragment>
                     ))}
 
                     <li className='relative flex-shrink-0 md:hidden inline-block'>
-                        <NavLink to='3' className='relative group text-[14px] flex items-center gap-2'>
-                            <span className='text-whiteColor font-semibold text-[14px]'>More</span>
+                        <NavLink to='3' className='relative group text-[10px] flex items-center gap-2'>
+                            <span className='text-whiteColor font-semibold md:text-[14px]'>More</span>
                         </NavLink>
 
                     </li>
 
-                    <span className='w-[1px] h-[25px] bg-whiteColor lg:block hidden'></span>
+                    {/* <span className='w-[1px] h-[25px] bg-whiteColor lg:block hidden'></span> */}
 
 
                     <div className='lg:flex items-center justify-between hidden'>
                         <li>
                             <NavLink to='#' className='relative group text-[14px] flex items-center gap-2 px-2 h-[40px]'>
-                                <span className='text-whiteColor font-semibold whitespace-nowrap text-[14px]'>Electronics & More</span> <span><img src={DownArrow} alt="" /></span>
+                                <span className='text-whiteColor font-semibold whitespace-nowrap text-[14px]'>Electronics & More</span> <span><img src={DownArrow} alt="" className='w-2.5' /></span>
                                 <div className={`absolute right-0 top-[100%] z-50 bg-buttonColor w-[800px] hidden items-start justify-between group-hover:flex`}>
                                     <div className='w-full p-4 text-whiteColor'>
                                         <div className='whitespace-nowrap flex items-start justify-between'>
                                             <div>
-                                                <h3 className='text-[25px] font-semibold'>Mobile Phones</h3>
-                                                <ul className='list-disc pl-5 text-[14px] font-semibold'>
+                                                <h3 className='text-[23px] font-semibold'>Mobile Phones</h3>
+                                                <ul className='list-disc pl-5 text-[12px] font-semibold'>
                                                     <li>demo 1</li>
                                                     <li>demo 2</li>
                                                     <li>demo 3</li>
                                                 </ul>
                                             </div>
                                             <div>
-                                                <h3 className='text-[25px] font-semibold'>Mobile Phones</h3>
-                                                <ul className='list-disc pl-5 text-[14px] font-semibold'>
+                                                <h3 className='text-[23px] font-semibold'>Mobile Phones</h3>
+                                                <ul className='list-disc pl-5 text-[12px] font-semibold'>
                                                     <li>demo 1</li>
                                                     <li>demo 2</li>
                                                     <li>demo 3</li>
@@ -145,16 +145,16 @@ function NavLinks() {
 
                                         <div className='flex items-start justify-between mt-4'>
                                             <div className='whitespace-nowrap'>
-                                                <h3 className='text-[25px] font-semibold'>Mobile Phones</h3>
-                                                <ul className='list-disc pl-5 text-[14px] font-semibold'>
+                                                <h3 className='text-[23px] font-semibold'>Mobile Phones</h3>
+                                                <ul className='list-disc pl-5 text-[12px] font-semibold'>
                                                     <li>demo 1</li>
                                                     <li>demo 2</li>
                                                     <li>demo 3</li>
                                                 </ul>
                                             </div>
                                             <div className='whitespace-nowrap'>
-                                                <h3 className='text-[25px] font-semibold'>Mobile Phones</h3>
-                                                <ul className='list-disc pl-5 text-[14px] font-semibold'>
+                                                <h3 className='text-[23px] font-semibold'>Mobile Phones</h3>
+                                                <ul className='list-disc pl-5 text-[12px] font-semibold'>
                                                     <li>demo 1</li>
                                                     <li>demo 2</li>
                                                     <li>demo 3</li>
@@ -185,9 +185,9 @@ function NavLinks() {
                             </NavLink>
                         </li>
                         <li>
-                            <NavLink to='#' className='relative group text-[14px] flex items-center gap-2 px-2 bg-[#DC4F45] h-[40px]'>
-                                <span className='text-whiteColor font-semibold text-[14px]'>Campare</span> <span><img src={DownArrow} alt="" /></span>
-                                <div className='absolute top-[100%] hidden group-hover:flex flex-col gap-2 whitespace-nowrap bg-[#DC4F45] text-whiteColor py-2 rounded-md left-0'>
+                            <NavLink to='#' className='relative group text-[12px] flex items-center gap-2 px-2 bg-[#DC4F45] h-[40px]'>
+                                <span className='text-whiteColor font-semibold text-[12px]'>Campare</span> <span><img src={DownArrow} alt="" className='w-2.5' /></span>
+                                <div className='absolute top-[100%] hidden group-hover:flex flex-col gap-2 whitespace-nowrap bg-[#DC4F45] text-whiteColor py-2 rounded-md left-0 text-[12px]'>
 
                                     <span><a href="/#" className='px-6'>Demo 1</a></span>
                                     <span><a href="/#" className='px-6'>Demo 2</a></span>
@@ -198,8 +198,8 @@ function NavLinks() {
                         </li>
 
                         <li>
-                            <NavLink to='#' className='relative group text-[14px] flex items-center gap-2 px-2 bg-[#C8DD16] h-[40px]'>
-                                <span className='text-whiteColor font-semibold text-[14px]'>Coupons</span> <span><img src={DownArrow} alt="" /></span>
+                            <NavLink to='#' className='relative group text-[12px] flex items-center gap-2 px-2 bg-[#C8DD16] h-[40px]'>
+                                <span className='text-whiteColor font-semibold text-[14px]'>Coupons</span> <span><img src={DownArrow} alt="" className='w-2.5' /></span>
                                 <div className='absolute top-[100%] hidden group-hover:flex flex-col gap-2 whitespace-nowrap bg-[#C8DD16] text-whiteColor py-2 rounded-md left-0'>
 
                                     <span><a href="/#" className='px-6'>Demo 1</a></span>
@@ -211,7 +211,7 @@ function NavLinks() {
                         </li>
 
                         <li>
-                            <NavLink to='#' className='text-[14px] font-semibold flex items-center gap-1 text-whiteColor pl-2'>
+                            <NavLink to='#' className='text-[12px] font-semibold flex items-center gap-1 text-whiteColor pl-2'>
                                 <span><img src={BestOffers} alt="" /></span>
                                 <span>Best Offers</span>
                             </NavLink>
