@@ -1,6 +1,6 @@
 import React, { useCallback, useEffect, useState } from 'react'
 import DownArrow from '../../assets/downarrow.svg'
-import Home from '../../assets/home.svg'
+// import Home from '../../assets/home.svg'
 import BestOffers from '../../assets/best-offers.svg'
 import { NavLink } from 'react-router-dom'
 import Sumsong from '../../assets/sumsong.png'
